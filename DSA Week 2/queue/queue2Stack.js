@@ -1,56 +1,38 @@
-class QueueUsingStack {
+
+
+
+class Queue{
     constructor() {
-        this.stack1 = [];
-        this.stack2 = [];
+        this.s1 = []
+        this.s2 = []
     }
 
-    // Enqueue: push into stack1
-    enqueue(value) {
-        this.stack1.push(value);
-    }
+    enqueue(x) {
+        while(this.s1.length) {
+            this.s2.push(this.s1.pop())
+        }
+        this.s1.push(x)
 
-    // Dequeue: move elements to stack2 if empty, then pop
+        while(this.s2.length) {
+            this.s1.push(this.s2.pop())
+        }
+    }
     dequeue() {
-        if (this.isEmpty()) {
-            console.log("Queue is empty");
-            return;
-        }
-
-        if (this.stack2.length === 0) {
-            while (this.stack1.length > 0) {
-                this.stack2.push(this.stack1.pop());
-            }
-        }
-
-        return this.stack2.pop();
+        if(this.s1 === 0) return null
+        let popped = this.s1.pop()
+         return popped
     }
-
-    // Check if both stacks are empty
-    isEmpty() {
-        return this.stack1.length === 0 && this.stack2.length === 0;
-    }
-
-    // Peek at the front element
-    peek() {
-        if (this.stack2.length === 0) {
-            while (this.stack1.length > 0) {
-                this.stack2.push(this.stack1.pop());
-            }
-        }
-        return this.stack2[this.stack2.length - 1];
-    }
-
-    // Print all elements
     print() {
-        const temp = [...this.stack2].reverse().concat(this.stack1);
-        console.log("Queue:", temp.join(" "));
+        console.log([...this.s1])
     }
 }
 
-const q = new QueueUsingStack();
-q.enqueue(10);
-q.enqueue(20);
-q.enqueue(30);
-q.print();        // Queue: 10 20 30
-console.log(q.dequeue()); // 10
-q.print();        // Queue: 20 30
+const sl = new Queue
+sl.enqueue(11)
+sl.enqueue(12)
+sl.enqueue(13)
+sl.print()
+console.log(sl.dequeue())
+console.log(sl.dequeue())
+console.log(sl.dequeue())
+console.log(sl.dequeue())
