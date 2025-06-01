@@ -35,7 +35,7 @@ class HashTable {
             i++
             index = (this.hash1(key) + i * step) % this.size
         }
-        if(this.table[index === null]) {
+        if(this.table[index] === null) {
             this.count++
         }
         this.table[index] = {key, value}

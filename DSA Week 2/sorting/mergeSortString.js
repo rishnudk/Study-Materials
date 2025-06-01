@@ -1,39 +1,25 @@
+
+
 function mergeSortString(str) {
-    // Convert string to array
-    let arr = str.split('');
 
-    // Sort the array using merge sort
-    let sortedArr = mergeSort(arr);
+    if(str.length <= 1) return str
 
-    // Convert back to string
-    return sortedArr.join('');
-}
+    let mid = Math.floor(str.length / 2)
+    let left = mergeSortString(str.slice(0, mid))
+    let right = mergeSortString(str.slice(mid))
+    let result = ''
+    let i=0, j=0
 
-function mergeSort(arr) {
-    if (arr.length <= 1) return arr;
-
-    let mid = Math.floor(arr.length / 2);
-    let left = mergeSort(arr.slice(0, mid));
-    let right = mergeSort(arr.slice(mid));
-
-    return merge(left, right);
-}
-
-function merge(left, right) {
-    let result = [];
-    let i = 0, j = 0;
-
-    while (i < left.length && j < right.length) {
-        if (left[i] < right[j]) {
-            result.push(left[i++]);
+    while(i<left.length && j<right.length) {
+        if(left[i] < right[j]) {
+            result = result + left[i]
+            i++
         } else {
-            result.push(right[j++]);
+            result = result+ right[j]
+            j++
         }
     }
+    return result+left.slice(i) + right.slice(j)
+ }
 
-    return result.concat(left.slice(i)).concat(right.slice(j));
-}
-console.log(mergeSortString("merge", 'hello'));   // Output: "eegmr"
-console.log(mergeSortString("javascript")); // Output: "aacijprstv"
-
-
+ console.log(mergeSortString('heallo'))
