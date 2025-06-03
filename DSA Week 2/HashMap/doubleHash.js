@@ -40,7 +40,7 @@ class HashTable {
         }
         this.table[index] = {key, value}
     }
-
+ 
     rehash() {
         const oldTable = this.table
         this.size *= 2
@@ -65,6 +65,6 @@ class HashTable {
 
 const sl = new HashTable(9)
 sl.set('name', 'rishnu')
-sl.set('naaame', 'rishnu')
+sl.set('naaaame', 'rishnu')
 sl.set('naddme', 'rishnu')
 sl.print()
