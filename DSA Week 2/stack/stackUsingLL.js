@@ -47,6 +47,14 @@ class Stack {
   size() {
     return this.length;
   }
+
+  print() {
+    let current = this.top
+    while(current) {
+      console.log(current.data)
+      current = current.next
+    }
+  }
 }
 
 // Example usage
