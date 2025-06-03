@@ -64,7 +64,7 @@ class HashTable {
 }
 
 const sl = new HashTable(9)
-sl.set('name', 'rishnu')
+sl.set('namaze', 'rishnu')
 sl.set('naaaame', 'rishnu')
 sl.set('naddme', 'rishnu')
 sl.print()
