@@ -1,25 +1,28 @@
 
 
-function mergeSortString(str) {
+function mergeSort(str) {
 
     if(str.length <= 1) return str
 
     let mid = Math.floor(str.length / 2)
-    let left = mergeSortString(str.slice(0, mid))
-    let right = mergeSortString(str.slice(mid))
+    let left = mergeSort(str.slice(0, mid))
+    let rigth = mergeSort(str.slice(mid))
+
     let result = ''
     let i=0, j=0
 
-    while(i<left.length && j<right.length) {
-        if(left[i] < right[j]) {
+    while(i < left.length && j< rigth.length) {
+        if(left[i] < rigth[j]) {
             result = result + left[i]
             i++
         } else {
-            result = result+ right[j]
+            result = result + rigth[j]
             j++
         }
     }
-    return result+left.slice(i) + right.slice(j)
- }
+     return result.concat(left.slice(i)).concat(rigth.slice(j))
+}
 
- console.log(mergeSortString('heallo'))
+let s = 'hello'
+mergeSort(s)
+console.log(mergeSort(s))

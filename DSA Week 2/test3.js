@@ -226,69 +226,114 @@
 
 
 
-class HashTable{
-    constructor(size = 10) {
-        this.size = size
-        this.count = 0
-        this.loadFactor = 0.75
-        this.table =  Array.from({length : size} , () => [])
-    }
+// class HashTable{
+//     constructor(size = 10) {
+//         this.size = size
+//         this.count = 0
+//         this.loadFactor = 0.75
+//         this.table =  Array.from({length : size} , () => [])
+//     }
 
-    hash(key) {
-        let hash = 0
-        for(let i=0;i<key.length;i++) {
-            hash = hash + key.charCodeAt(i)
-        } 
-                    return hash % this.size
+//     hash(key) {
+//         let hash = 0
+//         for(let i=0;i<key.length;i++) {
+//             hash = hash + key.charCodeAt(i)
+//         } 
+//                     return hash % this.size
 
-    }
+//     }
 
-    set(key, value) {
+//     set(key, value) {
 
-        let index = this.hash(key)
-        let bucket = this.table[index]
+//         let index = this.hash(key)
+//         let bucket = this.table[index]
 
-        for(let i=0;i<bucket.length;i++) {
-            if(bucket[i][0] === key) {
-                bucket[i][1] = value
-                return
-            }
+//         for(let i=0;i<bucket.length;i++) {
+//             if(bucket[i][0] === key) {
+//                 bucket[i][1] = value
+//                 return
+//             }
+//         }
+//         bucket.push([key, value])
+//         this.count++
+
+//         if(this.count / this.size > this.loadFactor) {
+//             this.rehash()
+//         }
+//     }
+
+//     rehash () {
+//         let oldTable = this.table
+//         this.size *= 2
+//         this.count = 0
+//         this.table = Array.from({length:this.size} , () => [])
+
+
+//         for(let x of oldTable) {
+//             for(let [key, value]  of x) {
+//                 this.set(key, value)
+//             }
+//         }
+
+//     }
+
+//     print() {
+//         for(let i=0;i<this.table.length;i++) {
+//             if(this.table[i]) {
+//                 console.log( i , this.table[i])
+//             }
+//         }
+//     }
+// }
+
+// const sl = new HashTable(10)
+// sl.set('name' , 'rishnu')
+// sl.set('nwwame' , 'rishnu')
+// sl.set('naddme' , 'rishnu')
+// sl.set('naaaame' , 'rishnu')
+// sl.print()
+
+
+// function mergeSort(arr) {
+
+//     if(arr.length <= 1) return arr
+
+//     let mid =Math.floor(arr.length / 2)
+//     let rigth = mergeSort(arr.slice(0, mid))
+//     let left = mergeSort(arr.slice(mid))
+//     let result = ''
+//     let i=0, j=0
+
+//     while(i<left.length && j< rigth.length) {
+//         if(left[i] < rigth[j]) {
+//         result = result + left[i]
+//             i++
+//         } else {
+//             result = result + rigth[j]
+//             j++
+//         }
+//     }
+//     return result.concat(left.slice(i)).concat(rigth.slice(j))
+
+// }
+// console.log(mergeSort('hello'))
+
+function quickSort(arr) {
+
+    if(arr.length <= 1) return arr
+
+    let pivot = arr[arr.length -1]
+    let left = ''
+    let rigth = ''
+
+    for(let i=0;i<arr.length - 1;i++) {
+        if(arr[i] < pivot) {
+left = left + arr[i]            
+        } else {
+            rigth = rigth + arr[i]
         }
-        bucket.push([key, value])
-        this.count++
-
-        if(this.count / this.size > this.loadFactor) {
-            this.rehash()
-        }
     }
+    return [...quickSort(left), pivot , ...quickSort(rigth)]
 
-    rehash () {
-        let oldTable = this.table
-        this.size *= 2
-        this.count = 0
-        this.table = Array.from({length:this.size} , () => [])
-
-
-        for(let x of oldTable) {
-            for(let [key, value]  of x) {
-                this.set(key, value)
-            }
-        }
-
-    }
-
-    print() {
-        for(let i=0;i<this.table.length;i++) {
-            if(this.table[i]) {
-                console.log( i , this.table[i])
-            }
-        }
-    }
 }
-
-const sl = new HashTable(10)
-sl.set('name' , 'rishnu')
-sl.set('nwwame' , 'rishnu')
-sl.set('naddme' , 'rishnu')
-sl.set('naaaame' , 'rishnu')
-sl.print()
+ console.log(quickSort('hello'))

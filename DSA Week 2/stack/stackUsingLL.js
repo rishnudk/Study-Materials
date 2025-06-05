@@ -63,6 +63,7 @@ stack.push("M");
 stack.push("E");
 stack.push("R");
 stack.push("N");
+stack.print()
 console.log(stack.pop()); // Output: "N"
 console.log(stack.peek()); // Output: "R"
 console.log(stack.size()); // Output: 3
