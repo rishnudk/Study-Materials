@@ -14,7 +14,7 @@ class Queue{
         this.queue[mid2] = temp
     }
     print() {
-        console.log([...this.queue])
+        console.log([...this.queue]) 
     }
 }
 const sl = new Queue() 
