@@ -10,7 +10,7 @@ class Queue{
         let mid2 = mid1 - 1
 
         let temp = this.queue[mid1]
-        this.queue[mid1] = this.queue[mid2]
+        this.queue[mid1] = this.queue[mid2] 
         this.queue[mid2] = temp
     }
     print() {
