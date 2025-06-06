@@ -17,7 +17,7 @@ class Queue{
         console.log([...this.queue])
     }
 }
-const sl = new Queue()
+const sl = new Queue() 
 sl.enqueue(11)
 sl.enqueue(22)
 sl.enqueue(33)
