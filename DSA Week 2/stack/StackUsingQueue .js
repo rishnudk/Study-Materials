@@ -10,9 +10,7 @@ class Stack{
         while(size > 1) {
             this.queue.push(this.queue.shift())
             size--
-        }
-
-        
+        }        
     }
     pop() {
         if(this.isEmpty()) return null
@@ -24,7 +22,9 @@ class Stack{
         isEmpty() {
             return this.queue.length === 0
         }
-    
+        print() {
+            console.log([...this.queue])
+        }
 }
 
 const sl = new Stack()
@@ -32,6 +32,7 @@ sl.push(11)
 sl.push(22)
 sl.push(33)
 sl.push(44)
+sl.print()
 console.log(sl.pop())
 console.log(sl.pop())
 console.log(sl.pop())
