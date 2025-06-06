@@ -12,6 +12,6 @@ function reverseQueue(queue) {
 }
 
 
-let qss = [1, 2, 3, 4];
-reverseQueue(qss);       
-console.log(reverseQueue(qss));
+// let qss = [1,7, 2, 3, 4];
+// reverseQueue(qss);       
+console.log(reverseQueue([1,7, 2, 3, 4]));
