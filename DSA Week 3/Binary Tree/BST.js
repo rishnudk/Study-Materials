@@ -68,6 +68,38 @@ class BST {
             this.inOrder(root.right)
         }
     }
+    postOrder(root) {
+        if(root) {
+            this.postOrder(root.left)
+            this.postOrder(root.right)
+            console.log(root.data)
+        }
+    }
+
+    levelOrder() {
+        const queue = []
+        queue.push(this.root)
+        while(queue.length) {
+            let curr =  queue.shift()
+            console.log(curr.data)
+            if(curr.left) {
+                queue.push(curr.left)
+            } if(curr.right) {
+                queue.push(curr.right)
+            }
+        }
+    }
+
+    min(root) {
+        if(!root.left) {
+            return root.data
+        } else {
+            return this.min(root.left)
+        }
+    } max(root) {
+        if(!root.right) return root.data
+        else return this.max(root.right)
+    }
 }
 
 const bt  = new BST() 
@@ -82,4 +114,6 @@ console.log(bt.search(bt.root, 50))
 console.log(bt.search(bt.root, 20))
 console.log(bt.search(bt.root, 40))
 
-bt.inOrder(bt.root)
+
+console.log(bt.min(bt.root))
+console.log(bt.max(bt.root))
