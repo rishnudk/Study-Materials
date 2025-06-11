@@ -60,7 +60,7 @@ class Node {
     }
 
     getTreeHeight() {
-        return this.findHeightOfNode(this.root)
+        return this.findHeightOfNode(this.root) 
     }
  }
 
@@ -70,3 +70,4 @@ class Node {
  
  console.log(bt.findDepth(2));
  console.log(bt.getTreeHeight())
+ console.log("Height of node 2:", bt.findHeightOfNode(bt.root.right));
