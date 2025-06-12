@@ -59,5 +59,5 @@ g.addEdge('C', 'D')
 g.print()
 
 g.bfs('A')
-console.log(' ')
+console.log(' ') 
 g.dfs('A')
