@@ -56,7 +56,7 @@ g.addEdge('A', 'C')
 g.addEdge('B', 'D')
 g.addEdge('C', 'D') 
 
-g.print()
+g.print() 
 
 g.bfs('A')
 console.log(' ') 
