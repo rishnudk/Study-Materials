@@ -42,7 +42,7 @@ class Node{
             if(Math.abs(left - right) > 1) return -1
              return Math.max(left , right) +1
         }
-        return check(node) !== -1
+        return check(root) !== -1
     }
  }
 
