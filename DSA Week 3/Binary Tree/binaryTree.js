@@ -50,7 +50,7 @@ class Node{
  bt.addRoot(1)
  bt.addLeft(bt.root, 2)
  bt.addRight(bt.root, 3)
- bt.addLeft(bt.root.left, 4)
+ bt.addLeft(bt.root.left, 4) 
  bt.addRight(bt.root.left, 6)
  bt.preorder(bt.root)
 
