@@ -46,7 +46,7 @@ class Node{
     }
  }
 
- const bt = new BinaryTree()
+ const bt = new BinaryTree() 
  bt.addRoot(1)
  bt.addLeft(bt.root, 2)
  bt.addRight(bt.root, 3)
