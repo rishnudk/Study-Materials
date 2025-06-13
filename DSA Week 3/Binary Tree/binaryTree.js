@@ -53,5 +53,5 @@ class Node{
  bt.addLeft(bt.root.left, 4) 
  bt.addRight(bt.root.left, 6)
  bt.preorder(bt.root)
-
+ 
  console.log(bt.isBalanced())
