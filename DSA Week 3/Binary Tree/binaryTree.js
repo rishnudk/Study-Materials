@@ -42,7 +42,7 @@ class Node{
             if(Math.abs(left - right) > 1) return -1
              return Math.max(left , right) +1
         }
-        return check(root) !== -1
+        return check(node) !== -1
     }
  }
 
@@ -50,8 +50,8 @@ class Node{
  bt.addRoot(1)
  bt.addLeft(bt.root, 2)
  bt.addRight(bt.root, 3)
- bt.addLeft(bt.root.left, 4) 
- bt.addRight(bt.root.left, 6)
+ bt.addLeft(bt.root.left, 455) 
+ bt.addRight(bt.root.left, 16)
  bt.preorder(bt.root)
  
  console.log(bt.isBalanced())
