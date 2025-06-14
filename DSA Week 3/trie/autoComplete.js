@@ -50,6 +50,7 @@ class Trie {
         }
 
         let suggest = []
+        
         function dfs(currNode,path) {
             if(currNode.end) {
                 suggest.push(path)

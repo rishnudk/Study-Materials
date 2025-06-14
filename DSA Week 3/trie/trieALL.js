@@ -41,10 +41,24 @@ class Trie {
         }
         return true
     }
+    longestPrefix(word) {
+        let node = this.root
+        let prefix = ''
+
+        for(let char of word) {
+            if(node.children[char]) {
+                prefix = prefix + char
+                node = node.children[char]
+            } else break
+        }
+        return prefix
+    }
 }
 
 const t = new Trie()
-t.insert('cat') 
+t.insert('cath') 
 t.insert('cam') 
 console.log(t.search('cat'))
 console.log(t.startsWith('cdd'))   
+
+console.log(t.longestPrefix('cathh'))
