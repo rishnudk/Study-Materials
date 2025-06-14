@@ -35,7 +35,7 @@ class Trie {
         let node = this.root
 
         for(let char of prefix) {
-            if(!node.children[char]) return false
+            if(!node.children[char]) return false 
             node = node.children[char]
 
         }
