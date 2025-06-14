@@ -51,7 +51,7 @@ class Trie {
                 node = node.children[char]
             } else break
         }
-        return prefix
+        return prefix 
     }
 }
 
