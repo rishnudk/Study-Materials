@@ -12,7 +12,7 @@ class Trie {
     }
 
     insert(word) {
-        let node = this.root
+        let node = this.root 
 
         for(let char of word) {
             if(!node.children[char]) {
