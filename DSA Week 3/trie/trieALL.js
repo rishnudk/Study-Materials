@@ -60,5 +60,5 @@ t.insert('cath')
 t.insert('cam') 
 console.log(t.search('cat'))
 console.log(t.startsWith('cdd'))   
-
+ 
 console.log(t.longestPrefix('cathh'))
