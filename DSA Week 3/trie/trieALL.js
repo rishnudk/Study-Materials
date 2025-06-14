@@ -48,7 +48,7 @@ class Trie {
         for(let char of word) {
             if(node.children[char]) {
                 prefix = prefix + char
-                node = node.children[char]
+                node = node.children[char] 
             } else break
         }
         return prefix 
