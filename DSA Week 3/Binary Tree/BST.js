@@ -38,7 +38,7 @@ class BST {
                 this.insertNode(root.right, newNode)
             }
         }
-    }
+    } 
     search( root, data) {
         if(!root) {
             return false
