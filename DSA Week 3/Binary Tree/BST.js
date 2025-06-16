@@ -39,7 +39,7 @@ class BST {
             }
         }
     } 
-    search( root, data) { 
+    search( root, data) {  
         if(!root) {
             return false
         } else {
