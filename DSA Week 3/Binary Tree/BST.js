@@ -41,7 +41,7 @@ class BST {
     } 
     search( root, data) {  
         if(!root) {
-            return false
+            return false 
         } else { 
             if(root.data === data) {
                 return true 
