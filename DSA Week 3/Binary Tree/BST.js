@@ -32,7 +32,7 @@ class BST {
                 this.insertNode(root.left, newNode)
             }
         } else {
-            if(root.right === null) {
+            if(root.right === null) { 
                 root.right = newNode
             } else {
                 this.insertNode(root.right, newNode)
