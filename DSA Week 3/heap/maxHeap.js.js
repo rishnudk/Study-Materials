@@ -45,6 +45,7 @@ function heapSort(arr) {
 
 
 
-let arr = [7,2,3,5,44,55,22,1,0]
+let arr = [7,2,3,5,1,0]
+heapSort(arr)
 
-console.log(heapSort(arr))
+console.log(arr)
