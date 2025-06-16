@@ -44,7 +44,7 @@ class BST {
             return false
         } else { 
             if(root.data === data) {
-                return true
+                return true 
             } else if(data < root.data) {
                 return this.search(root.left, data)
             }
