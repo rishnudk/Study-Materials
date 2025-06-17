@@ -47,5 +47,5 @@ function bfs(graph, start) {
 console.log("DFS:");
 dfs(graph, 'A');
 
-console.log("BFS:");
+console.log("BFS:"); 
 bfs(graph, 'A');    
