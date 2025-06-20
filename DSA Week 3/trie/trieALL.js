@@ -57,7 +57,7 @@ class Trie {
 
 const t = new Trie()
 t.insert('cath') 
-t.insert('cam') 
+t.insert('cam')  
 console.log(t.search('cat'))
 console.log(t.startsWith('cdd'))     
    
