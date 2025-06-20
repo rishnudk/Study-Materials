@@ -55,7 +55,7 @@ class Trie {
     }
 }
 
-const t = new Trie() 
+const t = new Trie()  
 t.insert('cath') 
 t.insert('cam')  
 console.log(t.search('cat'))
