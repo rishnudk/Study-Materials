@@ -29,7 +29,7 @@
 
      for (let i=0;i<arr.length-1;i++) {
         if( i !== arr.lenght)
-        count++
+        count++ 
      }
      console.log(count)
     
