@@ -22,7 +22,7 @@
 
     for(let i of arr) {
         count++
-    }
+    } 
     
      console.log(count)
 
