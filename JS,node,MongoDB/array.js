@@ -18,17 +18,17 @@
 
     let arr = [ 10,11,12,13,14,15]
 
-    let count = 0
+    // let count = 0
 
-    for(let i of arr) {
-        count++
-    } 
+    // for(let i of arr) {
+    //     count++
+    // } 
     
-     console.log(count)
+    //  console.log(count)
 
-
-     for (let i=0;i<arr.length-1;i++) {
-        if( i !== arr.lenght) 
+let count = 0
+     for (let i=0;arr.length !== undefined;i++) {
+        
         count++ 
      } 
      console.log(count)  
