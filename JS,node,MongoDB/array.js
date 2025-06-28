@@ -1,6 +1,6 @@
 
                    // ARRAY   ///
-    //Find the sum of all elements in an array: [10, 20, 30, 40, 50].
+    //1  Find the sum of all elements in an array: [10, 20, 30, 40, 50].
 
 
     // let arr = [ 10,11,12,13,14,15]
@@ -14,7 +14,7 @@
 
 
 
-    //Find the length of an array without using .length
+    // 2  Find the length of an array without using .length
 
     let arr = [ 10,11,12,13,14,15]
 
@@ -26,10 +26,43 @@
     
     //  console.log(count)
 
-let count = 0
-     for (let i=0;arr.length !== undefined;i++) {
+// let count = 0
+//      for (let i=0;arr[i] !== undefined;i++) {
         
-        count++ 
-     } 
-     console.log(count)  
+//         count++ 
+//      } 
+//      console.log(count) 
+
+// function getCount(arr) {
+//     let count = 0;
+
+//     while(arr[count] != undefined) {
+//         count++
+//     }
+//     return count
+// }
+// console.log(getCount(arr))
+
+
+// function getCount(arr) {
+//     let count = 0
+
+//     for(let i  of arr) {
+//         count++
+//     }
+//     return count;
+// }
+// console.log(getCount(arr))
+
+
+// 3    Add an element to an array without .push or .unshift.
+
+
+    arr[arr.length ] = 5
+
+    console.log(arr)
+
+
+
+
       
