@@ -97,6 +97,6 @@ for (let i=0; i<arr.length;i++) {
 
     arr.length = arr.length -1
 }
-console.log(arr)
+console.log(arr) 
 
 
