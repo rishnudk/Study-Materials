@@ -80,4 +80,23 @@
 
 //5  Remove one element from an array manually
 
+let arr = [10, 11, 12, 13, 14, 15];
+let removeVal = 12
+
+    let indexToRemove = -1
+for (let i=0; i<arr.length;i++) {
+    if(arr[i] === removeVal) {
+        indexToRemove = i;
+        break;
+    }
+}
+    if(indexToRemove !== -1) {
+    for(let i=indexToRemove;i<arr.length-1;i++) {
+        arr[i] = arr[i+1]
+    }
+
+    arr.length = arr.length -1
+}
+console.log(arr)
+
 
