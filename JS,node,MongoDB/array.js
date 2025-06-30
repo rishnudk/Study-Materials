@@ -1,37 +1,33 @@
+// ARRAY   ///
+//1  Find the sum of all elements in an array: [10, 20, 30, 40, 50].
 
-                   // ARRAY   ///
-    //1  Find the sum of all elements in an array: [10, 20, 30, 40, 50].
+// let arr = [ 10,11,12,13,14,15]
 
+// let sum = 0
+// for (let i=0; i< arr.length;i++) {
+//     sum = sum + arr[i]
+// }
 
-    // let arr = [ 10,11,12,13,14,15]
+// console.log(sum)
 
-    // let sum = 0
-    // for (let i=0; i< arr.length;i++) {
-    //     sum = sum + arr[i]
-    // }
+// 2  Find the length of an array without using .length
 
-    // console.log(sum)
+// let arr = [ 10,11,12,13,14,15]
 
+// let count = 0
 
+// for(let i of arr) {
+//     count++
+// }
 
-    // 2  Find the length of an array without using .length
-
-    let arr = [ 10,11,12,13,14,15]
-
-    // let count = 0
-
-    // for(let i of arr) {
-    //     count++
-    // } 
-    
-    //  console.log(count)
+//  console.log(count)
 
 // let count = 0
 //      for (let i=0;arr[i] !== undefined;i++) {
-        
-//         count++ 
-//      } 
-//      console.log(count) 
+
+//         count++
+//      }
+//      console.log(count)
 
 // function getCount(arr) {
 //     let count = 0;
@@ -43,7 +39,6 @@
 // }
 // console.log(getCount(arr))
 
-
 // function getCount(arr) {
 //     let count = 0
 
@@ -54,15 +49,30 @@
 // }
 // console.log(getCount(arr))
 
-
 // 3    Add an element to an array without .push or .unshift.
 
+// arr[arr.length ] = 5
 
-    arr[arr.length ] = 5
+// console.log(arr)
 
-    console.log(arr)    
-    
+// let newElement = 100
+// for ( let i= arr.length;i>0;i--) {
+//     arr[i] = arr[i-1]
+// }
+// arr[0] = newElement
 
+// console.log(arr)
 
+// 4   Remove the last element of an array without .pop
 
-      
+//    arr.length = arr.length - 1
+
+//    console.log(arr)
+
+// let arr = [10, 11, 12, 13, 14, 15];
+
+// for (let i = 0; i < arr.length - 1; i++) {
+//   arr[i] = arr[i + 1];
+// }
+// arr.length = arr.length - 1;
+// console.log(arr);
