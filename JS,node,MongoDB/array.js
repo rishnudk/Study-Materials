@@ -93,7 +93,7 @@ for (let i=0; i<arr.length;i++) {
     if(indexToRemove !== -1) {
     for(let i=indexToRemove;i<arr.length-1;i++) {
         arr[i] = arr[i+1]
-    } 
+    }  
 
     arr.length = arr.length -1
 }  
