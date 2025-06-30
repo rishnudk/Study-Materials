@@ -76,3 +76,8 @@
 // }
 // arr.length = arr.length - 1;
 // console.log(arr);
+
+
+//5  Remove one element from an array manually
+
+
