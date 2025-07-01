@@ -100,8 +100,28 @@
 // console.log(arr) 
 
 
-let a1 = [1,2,3,4,5]
-let a2 = [6,7,8]
+// let a1 = [1,2,3,4,5]
+// let a2 = [6,7,8]
+
+// for(let i=0;i<a2.length;i++) {
+//     a1[a1.length] = a2[i]
+// }
+// console.log(a1)
+
+let arr = [1,2,3,4]
+
+let element = 11
+let found = false
+
+for(let i=0;i<arr.length;i++) {
+    if(arr[i] === element) {
+        found = true;
+        break;
+        console.log('has element')
+    }
+}
+console.log(found)
+
 
 
 
