@@ -198,6 +198,6 @@ let count = []
 for(let num in arr) {
     count[num] = (count[num] || 0) + 1
 }
-console.log(count)
+console.log(count) 
 
 
