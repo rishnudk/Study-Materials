@@ -108,21 +108,96 @@
 // }
 // console.log(a1)
 
-let arr = [1,2,3,4]
 
-let element = 11
-let found = false
 
-for(let i=0;i<arr.length;i++) {
-    if(arr[i] === element) {
-        found = true;
-        break;
-        console.log('has element')
-    }
+//6  Find if a given element exists in an array (no .includes).
+
+// let arr = [1,2,3,4]
+
+// let element = 11
+// let found = false
+
+// for(let i=0;i<arr.length;i++) {
+//     if(arr[i] === element) {
+//         found = true;
+//         break;
+//         console.log('has element')
+//     }
+// }
+// console.log(found)
+
+
+// 7 Find the first occurrence of a target value in an array
+
+// let arr = [1,2,3,4]
+// let target = 4
+// let index = -1
+
+// for (let i=0;i<arr.length;i++) {
+//     if(arr[i] === target) {
+//         index = i
+//         break;
+//     }
+// }
+// console.log(index)
+
+
+//8   Separate even and odd from an array
+
+// let arr = [1,2,3,4,5,6]
+
+// let odd = []
+// let even = []
+
+// for (let i=0;i<arr.length;i++) {
+//     if(arr[i] % 2 === 0) {
+//         odd[odd.length] = arr[i]
+//     } else {
+//         even[even.length] = arr[i]
+//     }
+// }
+// console.log(odd)
+// console.log(even)
+
+
+// 9 Sum of array
+
+// let arr = [1,2,3]
+// let sum =0
+// let avg = 0
+
+// for(let i=0;i<arr.length;i++) {
+// sum = sum + arr[i]
+//  avg = sum / arr.length
+// }
+// console.log(sum)
+// console.log(avg)
+
+
+//10 Count the number of even and odd numbers in an array
+// let arr = [1,2,3,4,5,6,7]
+
+// countOdd = 0
+// countEven = 0
+
+// for(let i=0;i<arr.length;i++){
+// if(arr[i]  % 2 ) {
+//     countEven++
+// } else countOdd++
+// }
+// console.log(countEven)
+// console.log(countOdd)
+
+
+// 11
+
+let arr = [1,2,3,4,5,6,7]
+
+let count = []
+
+for(let num in arr) {
+    count[num] = (count[num] || 0) + 1
 }
-console.log(found)
-
-
-
+console.log(count)
 
 
