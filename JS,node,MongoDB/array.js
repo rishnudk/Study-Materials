@@ -189,15 +189,15 @@
 // console.log(countOdd)
 
 
-// 11
+// 11 Count how many times each element appears.
 
-let arr = [1,2,3,4,5,6,7]
+let arr = [1,2,2,2,3,3,4,5,3,4,5,6,7]
 
-let count = []
+let count = {}
 
-for(let num in arr) {
+for(let num of arr) {
     count[num] = (count[num] || 0) + 1
 }
 console.log(count)  
-
+ 
 
