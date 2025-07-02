@@ -191,13 +191,68 @@
 
 // 11 Count how many times each element appears.
 
-let arr = [1,2,2,2,3,3,4,5,3,4,5,6,7]
+// let arr = [1,2,2,2,3,3,4,5,3,4,5,6,7]
 
-let count = {}
+// let freq = {}
 
-for(let num of arr) {
-    count[num] = (count[num] || 0) + 1
-}
-console.log(count)  
+// for(let num of arr) {
+//     freq[num] = (freq[num] || 0) + 1
+// }
+// console.log(freq) 
+
+// for(let i=0;i<arr.length; i++) {
+//     let val = arr[i] 
+//     if(freq[val] === undefined){
+//         freq[val] = 1
+//     } else {
+//         freq[val] ++
+//     }
+// }
+
+// console.log(freq)
  
+
+//     12  Check if an array has duplicates.   
+
+// let arr = [1,2,2,2,3,3,4,5,3,4,5,6,7]
+
+
+// let found = false
+
+// for(let i=0;i<arr.length;i++) {
+//     for(let j=i+1;j<arr.length;j++) {
+//         if(arr[i] === arr[j]) {
+//             found = true
+//             break;
+//         }
+//     }
+// }
+
+// console.log(found)
+
+// 13  Insert a new element into an array without built-in methods
+
+// arr[arr.length] = 44
+// console.log(arr)
+
+
+
+let arr = [1,1,1,1,1,1,1,0,0,0,0,1,0];
+
+count = 0
+
+for(let i=0;i<arr.length;i++) {
+    count = count + (arr[i] === 0)
+}
+console.log(count)
+
+
+
+
+//13      Move zeros to the end of an array
+
+let pos = 
+
+
+
 
