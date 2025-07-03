@@ -245,7 +245,7 @@ for(let i=0;i<arr.length;i++) {
     count = count + (arr[i] === 0)
 }
 console.log(count)      
-    
+     
 
   
   
