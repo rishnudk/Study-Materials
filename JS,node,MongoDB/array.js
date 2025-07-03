@@ -246,7 +246,7 @@ for(let i=0;i<arr.length;i++) {
 }
 console.log(count)      
      
-
+ 
   
   
 //13      Move zeros to the end of an array snd
