@@ -244,12 +244,12 @@ count = 0
 for(let i=0;i<arr.length;i++) {
     count = count + (arr[i] === 0)
 }
-console.log(count)
+console.log(count)      
+    
 
-
-
-
-//13      Move zeros to the end of an array
+  
+  
+//13      Move zeros to the end of an array snd
     
    
    
