@@ -320,20 +320,91 @@
 // console.log(arr)
 
 
+// 17   Remove duplicates from an array (no Set)
 
-let arr = [1,4,4,6,3,2,6,3]
+// let arr = [1,4,4,6,3,2,6,3]
 
-let unique =  {}
-let result = []
+// let unique =  {}
+// let result = []
 
-for(let i=0;i<arr.length;i++) {
-    if(!unique[arr[i]]) {
-        unique[arr[i]] = true
-        result.push(arr[i])
+// for(let i=0;i<arr.length;i++) {
+//     if(!unique[arr[i]]) {
+//         unique[arr[i]] = true
+//         result.push(arr[i])
+//     }
+// }
+
+// console.log(result)
+
+
+//  18   Remove duplicate even numbers from an array
+
+
+// let arr = [1,4,4,6,3,2,6,7,3]
+
+// let unique =  {}
+// let result = []
+
+
+// for(let i=0;i<arr.length;i++) {
+
+//     let num = arr[i]
+
+//     if(num % 2 === 0) {
+
+//         if(!unique[num]){
+//             unique[num] = true
+//             result.push(num)
+//         }
+//     }
+//         else {
+//             result.push(num)
+//             }    }
+    
+
+// console.log(result)
+
+
+
+// 19  remove all zeros 
+
+// let arr = [1,0,2,0,3,4,5]
+
+// let nonZero = []
+// for(let i=0;i<arr.length;i++) {
+//     if(arr[i] !== 0) {
+//         nonZero.push(arr[i])
+//     }
+// }
+
+// let result = arr.filter(num => num !== 0)
+
+// console.log(nonZero)
+// console.log(result)
+
+
+// 20 remove prime num
+
+function isPrime(num) {
+
+    if(num <= 1) return false;
+    if(num === 2) return true
+    if(num % 2 ===0) return false
+
+    for(let i=2; i*i <= num; i+= 2) {
+        if(num % i === 0) return false
     }
+     return true
 }
 
+let arr = [1,2,3,4,5,6,7]
+
+let result = arr.filter(num => !isPrime(num))
+
 console.log(result)
+
+
+
 
 
 
