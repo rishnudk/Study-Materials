@@ -251,28 +251,92 @@
   
 //13      Move zeros to the end of an array 
 
-let arr = [1,0,2,0,3,6]
+// let arr = [1,0,2,0,3,6]
 
+// let result = []
+// let zeroCount = 0
+
+// for(let i=0; i<arr.length; i++) {
+//     if(arr[i] === 0) {
+//         zeroCount++
+
+
+//     } else {
+//         result.push(arr[i])
+//     }
+
+    
+// }
+// while(zeroCount > 0) {
+//         result.unshift(0);
+//         zeroCount--;
+
+//     }
+
+// console.log(result)
+
+
+// 14  delete first and last element
+
+// let arr = [1,0,2,0,3,6]
+
+// arr.pop(arr.length-1)
+// console.log(arr)
+// arr.shift(arr.length-1)
+// console.log(arr)
+
+
+// 15 filter even number
+
+// let arr = [1,0,2,0,3,6]
+// let a1 = []
+
+// for(let i=0;i<arr.length;i++) {
+// if(arr[i] % 2 == 0) {
+//     a1 = arr[i]
+// }
+// }
+// console.log(a1)
+
+
+//  16 Reverse an array without using .reverse() or extra array.
+
+
+
+// let arr = [1,4,2,6,3]
+
+// let start = 0
+// let end = arr.length - 1
+
+// while (start< end) {
+    
+//     let temp = arr[start]
+//     arr[start] = arr[end]
+//     arr[end] = temp
+
+//     end--
+//     start++
+// }
+// console.log(arr)
+
+
+
+let arr = [1,4,4,6,3,2,6,3]
+
+let unique =  {}
 let result = []
-let zeroCount = 0
 
-for(let i=0; i<arr.length; i++) {
-    if(arr[i] === 0) {
-        zeroCount++
-
-
-    } else {
+for(let i=0;i<arr.length;i++) {
+    if(!unique[arr[i]]) {
+        unique[arr[i]] = true
         result.push(arr[i])
-    }
-
-    while(zeroCount > 0) {
-        result.unshift(0)
-        zeroCount--
-
     }
 }
 
 console.log(result)
+
+
+
 
 
     
