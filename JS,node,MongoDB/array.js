@@ -237,19 +237,44 @@
 
 
 
-let arr = [1,1,1,1,1,1,1,0,0,0,0,1,0];
+// let arr = [1,1,1,1,1,1,1,0,0,0,0,1,0];
 
-count = 0
+// count = 0
 
-for(let i=0;i<arr.length;i++) {
-    count = count + (arr[i] === 0)
-}
-console.log(count)      
+// for(let i=0;i<arr.length;i++) {
+//     count = count + (arr[i] === 0)
+// }
+// console.log(count)      
      
  
   
   
-//13      Move zeros to the end of an array snd
+//13      Move zeros to the end of an array 
+
+let arr = [1,0,2,0,3,6]
+
+let result = []
+let zeroCount = 0
+
+for(let i=0; i<arr.length; i++) {
+    if(arr[i] === 0) {
+        zeroCount++
+
+
+    } else {
+        result.push(arr[i])
+    }
+
+    while(zeroCount > 0) {
+        result.unshift(0)
+        zeroCount--
+
+    }
+}
+
+console.log(result)
+
+
     
    
    
