@@ -444,40 +444,46 @@
 
 // 23  . Remove the smallest number from an array
 
-let arr = [100,300,200,500,400]
-let min = arr[0]
-let index = 0
+// let arr = [100,300,200,500,400]
+// let min = arr[0]
+// let index = 0
 
-for(let i=1;i<arr.length; i++) {
-  if(arr[i] < min) {
-    min = arr[i]
-    index = i
-  }
-}
+// for(let i=1;i<arr.length; i++) {
+//   if(arr[i] < min) {
+//     min = arr[i]
+//     index = i
+//   }
+// }
 
-for(let i=index;i<arr.length;i++) {
-  arr[i] = arr[i+1]
-}
-arr.length -= 1
-console.log(arr)
-//method 2
+// for(let i=index;i<arr.length;i++) {
+//   arr[i] = arr[i+1]
+// }
+// arr.length -= 1
+// console.log(arr)
+// //method 2
 
-arr.sort((a,b) => a-b)
-console.log(arr)
-arr.shift()
-console.log(arr)
+// arr.sort((a,b) => a-b)
+// console.log(arr)
+// arr.shift()
+// console.log(arr)
 
-//remove middleṇ
+// //remove middleṇ
 
-let middle = Math.floor(arr.length / 2)
+// let middle = Math.floor(arr.length / 2)
 
-for(let i = middle;i<arr.length; i++) {
-  arr[i] = arr[i + 1]
-}
-arr.length -= 1
+// for(let i = middle;i<arr.length; i++) {
+//   arr[i] = arr[i + 1]
+// }
+// arr.length -= 1
 
-console.log(arr)
+// console.log(arr)
  
+
+let str  = 'hello'
+
+let space = str.map (str => str.split('').join(' '))
+console.log(space)
+
 
 
     
