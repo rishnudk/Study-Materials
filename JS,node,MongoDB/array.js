@@ -320,7 +320,7 @@
 // console.log(arr)
 
 
-// 17   Remove duplicates from an array (no Set)
+// 17   Remove duplicates from an array (no Set) / unique print
 
 // let arr = [1,4,4,6,3,2,6,3]
 
@@ -385,28 +385,98 @@
 
 // 20 remove prime num
 
-function isPrime(num) {
+// function isPrime(num) {
 
-    if(num <= 1) return false;
-    if(num === 2) return true
-    if(num % 2 ===0) return false
+//     if(num <= 1) return false;
+//     if(num === 2) return true
+//     if(num % 2 ===0) return false
 
-    for(let i=2; i*i <= num; i+= 2) {
-        if(num % i === 0) return false
-    }
-     return true
+//     for(let i=3; i*i <= num; i+= 2) {
+//         if(num % i === 0) return false
+//     }
+//      return true
+// }
+
+// let arr = [1,2,3,4,5,6,7]
+
+// let result = arr.filter(num => !isPrime(num))
+
+// console.log(result)
+
+// 21  Remove a specific value
+
+
+// let arr = [1,2,3,4,5,6,7]
+
+// let remove = 5
+
+// let result = arr.filter(num => num !== remove)
+
+// console.log(result)
+
+
+// let arr = [1, 2, 3, 4, 3, 5];
+// let valueToRemove = 3;
+// let index = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] !== valueToRemove) {
+//     arr[index++] = arr[i];
+//   }
+// }
+
+// arr.length = index
+// console.log(arr);  
+
+
+///   22 Remove the second last element from an array
+
+// let arr = [100,300,200,500,400]
+
+// let index = arr.length - 2
+
+// for(let i=index;i<arr.length;i++) {
+//   arr[i] = arr[i+1]
+// }
+// arr.length = arr.length - 1
+// console.log(arr)
+
+
+// 23  . Remove the smallest number from an array
+
+let arr = [100,300,200,500,400]
+let min = arr[0]
+let index = 0
+
+for(let i=1;i<arr.length; i++) {
+  if(arr[i] < min) {
+    min = arr[i]
+    index = i
+  }
 }
 
-let arr = [1,2,3,4,5,6,7]
+for(let i=index;i<arr.length;i++) {
+  arr[i] = arr[i+1]
+}
+arr.length -= 1
+console.log(arr)
+//method 2
 
-let result = arr.filter(num => !isPrime(num))
+arr.sort((a,b) => a-b)
+console.log(arr)
+arr.shift()
+console.log(arr)
 
-console.log(result)
- 
+//remove middleṇ
 
+let middle = Math.floor(arr.length / 2)
 
+for(let i = middle;i<arr.length; i++) {
+  arr[i] = arr[i + 1]
+}
+arr.length -= 1
 
-
+console.log(arr)
  
 
 
