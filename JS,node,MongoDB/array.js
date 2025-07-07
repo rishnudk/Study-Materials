@@ -485,4 +485,3 @@ let space = str.map (str => str.split('').join(' '))
 console.log(space)   
        
  
-   
