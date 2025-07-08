@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Checkbox</title>
+</head>
+<body>
+
+  <!-- Checkbox -->
+  <input type="checkbox" id="myCheckbox">
+  <label for="myCheckbox">Subscribe</label>
+
+  <br><br>
+
+  <!-- Button -->
+  <button onclick="toggleCheckbox()">Toggle Checkbox</button>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleCheckbox() {
+      const checkbox = document.getElementById('myCheckbox');
+      checkbox.checked = !checkbox.checked;
+    }
+  </script>
+
+</body>
+</html>
