@@ -1,25 +1,18 @@
-// Callback function, passed as a parameter in the higher order function
-
-
-// higher order function
-// function higherOrderFunction(func){
-//     console.log('I am higher order function')
-//     func()
+// function greet(name) {
+//     return `hello, ${name}`;
 // }
-
-// higherOrderFunction(callbackFunction);
-
-// function callbackFunction(){
-//     console.log('I am  a callback function');
+// function printmessage(messageFunction, name) {
+//     console.log(messagefunction(name));
+    
 // }
+// printMessage(greet, 'Alice'); 
 
-function higherorderfunction(callbackfunction) {
-    console.log("higher here");
-    
-    callbackfunction()
+function greet(name) {
+    return `Hello, ${name}!`;
 }
-function callback() {
-    console.log("iam callback");
-    
+
+function printMessage(messageFunction, name) {
+    console.log(messageFunction(name));
 }
-higherorderfunction(callback)
+
+printMessage(greet, 'Alice'); // Hello, Alice!

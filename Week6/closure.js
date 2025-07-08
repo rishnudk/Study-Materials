@@ -1,10 +1,13 @@
-// function outerFunction(){
-//     let outervariable = "iam outside" 
-//     function innerfunction(){
-//         console.log(outervariable);
+function outerFunction () {
+    let outer = 'hii outer here'
+
+    function innerFunction() {
+        console.log(outer);
         
-//     }
-//     return innerfunction
-// }
-// let closure = outerFunction()
-// closure();
+    }
+    return innerFunction()
+}
+let closure = outerFunction()
+closure;
+
+

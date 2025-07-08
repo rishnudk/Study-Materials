@@ -1,21 +1,14 @@
-let str = [42,765,234,765,89,32]
+const arr = [1,5,7,8,33,4]
 
-let largest = -Infinity
-let sec = -Infinity
-let third = 0
-
-for (let i =0;i<str.length;i++){
-    if (str[i] > largest) {
-        sec = largest
-        largest = str[i]
+const result = arr.reduce((acc,curr) => {
+    if(curr > acc.largest) {
+        acc.second = acc.largest
+        acc.largest = curr 
+    } else if ( curr > acc.second && curr < acc.largest) {
+        acc.second = curr
     }
-    else if (str[i]>sec && str[i] !== largest) {
-        sec = str[ i]
-    } else if ( str[i] > third && str[i] !== ( largest || sec) ) {
-        third = str[i]
-    } 
-    
-}
-console.log(largest)
-console.log(sec)
-console.log(third)
+    return acc
+
+},{largest: -Infinity, second:-Infinity})
+
+console.log('second laargest', result.second);
