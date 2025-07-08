@@ -543,4 +543,4 @@ let result = Object.values(arr).reduce((acc,curr) => acc + Number(curr),0)
 
 console.log(result)
 
-   
+    
