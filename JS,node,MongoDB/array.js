@@ -479,10 +479,68 @@
 // console.log(arr)
  
  
-let str  = 'hello' 
+// let str  = 'hello' 
 
-let space = str.map (str => str.split('').join(' '))
-console.log(space)   
+// let space = str.map (str => str.split('').join(' '))
+// console.log(space)   
        
+
+
+// function sum(str , arr) {
+
+//     if(str.length % 2 === 0) {
+//          let sumEven = 0
+//     for(let i=0;i<arr.length;i++) {
+//             if(arr[i] % 2 === 0) {
+//                 sumEven = sumEven + arr[i]
+//             }
+//         }
+//     }
+// return sumEven
+// }
+// let str = 'hello'
+// let arr = [1,2,3,4,5,6,7,8,9]
+// let hi = sum()
+// console.log(hi)
+
+
+// 24 - find common elements from 2 arrays
+
+
+// let arr1 = [1,2,3,4,5]
+// let arr2 = [3,4,5,6,7]
+
+// for(let i=0;i<arr1.length;i++) {
+//     for(let j=0;j<arr2.length;j++) {
+//         if(arr1[i] === arr2[j]) {
+//             console.log(`${arr1[i]}, ${arr2[j]}`)
+//         }
+//     }
+// }
  
+// let result = arr1.filter(num => arr2.includes(num))
+// console.log(result)
+
+
+// 25 remove last property from object
+
+// let arr = { a:1, b:2, c:3}
+
+// let key = Object.keys(arr)
+
+// let last = key[key.length - 1]
+
+// delete arr[last]
+
+// console.log(arr)
+
+
+let arr = {
+    1:'1', 2:'4' , 3:'6'
+}
+
+let result = Object.values(arr).reduce((acc,curr) => acc + Number(curr),0)
+
+console.log(result)
+
   
