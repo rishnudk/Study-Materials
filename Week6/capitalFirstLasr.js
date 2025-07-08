@@ -1,7 +1,7 @@
-// function capital(str){
-//     return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-// }
-// console.log(capital('hii'));
+function capital(str){
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+}
+console.log(capital('helloo'));
 
 
 // function capital(str) {
@@ -10,6 +10,6 @@
 //     let middle = str.slice(1,str.length-1)
 //     return first + middle + last
 // }
-// console.log(capital('hii')); // Hii therE
+// console.log(capital('hii there')); 
 
 
