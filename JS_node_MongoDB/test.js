@@ -1,15 +1,28 @@
 
 
-const fs = require('fs')
+const express = require('express')
+const app = express();
 
+app.use(express.json());
 
-fs.readFile('text.txt', 'utf8', (err,data) => {
-    if(err) throw err
-    console.log(data)
-})
+app.use((req,res,next) => {
+    console.log('params running')
 
-fs.writeFile('textt.txt', 'new line adding', err => {
-    if(err) throw err
-    console.log('success')
-}) 
+    try{
+        const routeParams = Object.keys(req.params || {})
+        if(routeParams.length) {
+            console.log('route params' , routeParams)
+        } 
+    } catch (err) {
+        console.log('error happnd')
+    }
+    next();
+ })
 
+ app.get('/user/:id' , (req,res) => {
+    res.send('prams done')
+ })
+
+ app.listen(3000, () => {
+    console.log('runns on 3000')
+ })
