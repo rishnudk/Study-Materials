@@ -1,28 +1,20 @@
 
 
-const express = require('express')
-const app = express();
 
-app.use(express.json());
 
-app.use((req,res,next) => {
-    console.log('params running')
+// let str = 'rishnu'
+// let hi = str.split('').join(' ')
+// console.log(hi)
 
-    try{
-        const routeParams = Object.keys(req.params || {})
-        if(routeParams.length) {
-            console.log('route params' , routeParams)
-        } 
-    } catch (err) {
-        console.log('error happnd')
-    }
-    next();
- })
 
- app.get('/user/:id' , (req,res) => {
-    res.send('prams done')
- })
 
- app.listen(3000, () => {
-    console.log('runns on 3000')
- })
+// let result = ''
+// for(let i=0;i<str.length;i++) {
+//     result = result + str[i]
+//     if(i !== str.length - 1) {
+//         result = result + ' ';
+//     }
+// }
+
+// let result = str.split('').map((s) => s + ' ').join('')
+// console.log(result)

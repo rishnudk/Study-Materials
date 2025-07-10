@@ -535,12 +535,30 @@
 // console.log(arr)
 
 
-let arr = {
-    1:'1', 2:'4' , 3:'6'
-}
+// let arr = {
+//     1:'1', 2:'4' , 3:'6'
+// }
 
-let result = Object.values(arr).reduce((acc,curr) => acc + Number(curr),0)
+// let result = Object.values(arr).reduce((acc,curr) => acc + Number(curr),0)
 
-console.log(result)
+// console.log(result)
 
+// 26 add space in string
+
+// let str = 'rishnu'
+// let hi = str.split('').join(' ')
+// console.log(hi)
+
+
+
+// let result = ''
+// for(let i=0;i<str.length;i++) {
+//     result = result + str[i]
+//     if(i !== str.length - 1) {
+//         result = result + ' ';
+//     }
+// }
+
+// let result = str.split('').map((s) => s + ' ').join('')
+// console.log(result)
        
