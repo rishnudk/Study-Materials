@@ -557,7 +557,7 @@
 //     if(i !== str.length - 1) {
 //         result = result + ' ';
 //     }
-// }
+// } 
 
 // let result = str.split('').map((s) => s + ' ').join('')
 // console.log(result)
