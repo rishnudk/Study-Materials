@@ -33,7 +33,7 @@ class SLL {
             current = current.next
         }
         console.log(result)
-    }
+    } 
 
     delete(data) {
 
