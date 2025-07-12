@@ -35,7 +35,7 @@ class SLL {
         console.log(result)
     } 
 
-    delete(data) {
+    delete(data) { 
 
         if(!this.head) return
 
