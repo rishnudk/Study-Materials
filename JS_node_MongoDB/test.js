@@ -1,3 +1,5 @@
+
+
 const arr = [100, 10, 45, 10, 2, 89, 32, 100, 5];
 
 for(let i=0;i<arr.length;i++) {
@@ -10,4 +12,4 @@ for(let i=0;i<arr.length;i++) {
   }
 }
 
-console.log(arr); // [2, 5, 10, 10, 32, 45, 89, 100, 100]
+console.log(arr);
