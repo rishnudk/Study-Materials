@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">hello world</h1>
+    <input type="button"  id="btn" value="color">
+  
+
+
+
+  
+    <script>
+
+        var heading = document.getElementById("head")
+        var btn = document.getElementById("btn")
+
+        btn.addEventListener("click" ,hii)
+
+        heading.addEventListener("mouseout", change)
+
+        function hii() {
+            heading.style.color = "red"
+        }
+        function change (){
+            heading.style.backgroundColor = "blue"
+        }
+
+
+
+
+     
+
+
+
+     </script>
+</body>
+</html>

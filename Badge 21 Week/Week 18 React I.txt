@@ -1,0 +1,459 @@
+Week 18 React I
+
+1. What is react?
+
+React is a javascript library used to build user interfaces (UI), primarily for single page applications. It allows you to create interactive UIs that update effeciently and dynamically as the data changes.
+
+Key features of react:
+- Component based architecture
+- Declarative UI
+- Virtual DOM
+- One way data flow
+- State management
+
+2. DOM
+
+a) DOM vs Virtual DOM
+A DOM is a tree like structure that represents the structure of your HTML document. Browser uses this to render the webpage. Virtual DOM is a lightweight copy of the actual DOM that react uses to optimize UI updates
+
+DOM
+- Actual representation of the webpage
+- Changes in DOM are slow because it involves rerendering elements directly in the browser
+Virtual DOM
+- React creates a virtual DOM that is a replica of the actual DOM
+- When changes occur react first updates the virtual DOM and then compares it to the real DOM to update changes
+
+Why virtual DOM?
+- Faster updates and less expensive operations compared to the real DOM
+
+b) Reconciliation
+Reconciliation is the process react uses to update UI effectivily by figuring out what has changed in the virtual DOM compared to the real DOM
+
+How it works?
+- State change - When a component state change, react creates a new virtual DOM
+- Comparison (Diffing) - Compares the new DOM with the previous one to check for differences
+- Updation - React updates only the changes to the real DOM rather than rendering the whole UI
+
+c) Diffing algorithm
+This algorithm is how it optimizes UI effectivily. It effeciently compares the previous with the new one
+
+How it works
+- Element comparison - Start by comparing the root nodes of the previous and new one
+- Component comparison - React checks the changes in each element
+- Efficient updation - Update the parts of UI that have changed
+
+d) React fibre
+A complete rewrite of the react core algorithm focusing on improving the reconciliation process and enabling incremental rendering.
+
+Incremental rendering - React fibre allows react to work in chunks so it doesnt block the main thread. Result in smoother animations and more responsive UIs.
+- Proirotization - React can prioritize important updates and postpone less ones
+- Concurrency - Allows react to pause and resume rendering tasks, keeping apps responsive
+
+e) Shadow DOM
+Shadow DOM is a web standard used by some UI libraries to encapsulate the structure, style and behaviour of a component. Creates a seperate DOM tree that is isolated from the rest of the component
+
+Key features
+- Encapsulation
+- Custom elements
+
+3. Dynamic Rendering
+Dynamic rendering in react means updating or performing actions based on some conditions like user input, state changes, props ect
+
+4. Prop vs State
+
+Prop
+- Data passed from parent to child
+- Immutable
+- Used for configuration
+- Parent component
+
+State
+- Local data owned by the component
+- Mutable
+- Used for internal changes
+- Component itself
+
+5. Client side vs Server side rendering
+
+Client side rendering
+- Browser downloads a basic HTML then JS runs and renders content
+- Used by react apps by default
+- Faster after load but initialy might be slow
+
+Server side rendering
+- HTML is rendered on the server and sent to the browser
+- Faster first load
+- SEO friendly
+
+6. Synthetic Events
+React wraps browsers native events into synthetic events to make them work consistently across all browsers
+- Can still use same event names like onClick, onChange
+- Synthetic events wrap around browsers native events
+
+a) Event Pooling
+- React uses the same event object called event pooling
+- After the event is handles the object is cleared
+- If you need to use the event asynchronously, call e.persist()
+
+7. Life cycle
+In function components, we use the same useEffect hook to stimulate lifecycle events
+
+8. View oriented
+- React is view oriented
+- It focus only on the UI layer (views) in the MVC architecture
+- It doesnt control routing or data management by default
+
+9. Memoization
+This is a technique to cache the result of a function call and return back from the cached one when this function gets called again. In react, helps to optimize performance by preventing unnecessary renders
+
+10. Pure function and components
+
+Pure functions
+- No side effects
+- Same output for same input
+
+Pure components
+- Renders the same output for same props and state
+- Doesnt depend on anything outside
+
+11. Strict mode
+It is a wrapper used in development to highlight potential issues
+What is does
+- Warns about deprecated lifecycle methods
+- Detects unexpected side effects
+- Helps with identifing unsafe practises
+
+12. SPA (Single page application) vs MPA (Multi page application)
+
+SPA
+- One HTMl page
+- Handled via JS
+- Faster after first load
+- React, Vue
+- Needs extra config
+
+MPA 
+- Multiple HTMl pages
+- Reloads page on each route
+- Slower navigation
+- Traditional apps
+- SEO friendly
+
+13. Static vs Dynamic rendering
+
+Static Rendering
+- HTMl is generated at built time
+- Fast and cacheable
+- Great for blogs, docs
+
+Dynamic Rendering
+- HTMl is generated at request time
+- Suitable for personalized or live content
+
+a)Incremental static regeneration
+- Mix of static and dynamic
+- Generate pages on demand and reuses them for next visits
+
+14. Components
+
+a) A react render tree
+A render tree is a heirarchy of components that react uses to render the UI
+
+- Top level components
+	. The root component (like App) that gets rendered inside the #root div of index.html
+	. It may contain many child components
+
+- Leaf level components
+	. They are components that dont render other components
+	. They sit at the end of the branch on the tree
+
+b) Props
+Short for properties
+- Passed from parent to child
+- Immutable
+- Used to customize components
+
+c) Forwarding props
+Used when you want to props through a component to a child without manually passing each one
+
+d) Children props
+Used to render whatever is inside a components opening or closing tag
+
+e) Importance of making components pure
+Pure components are 
+- Easier to test
+- More predictable
+- Less prone to bugs
+- Faster
+
+15. JSX
+JSX is a syntax expression for javascript that looks like html and is used in react to describe UI
+
+a) Rules of JSX
+- Only one parent element
+- Use className instead of class
+- Close all tags
+- CamelCase for attributes
+
+b) Fragment
+Used to wrap JSX without adding extra DOM nodes
+
+c) Javascript in JSX
+Use {} to insert JS expression inside JSX
+
+16. Conditional rendering
+Render different component or content based on conditions
+- Using ternary
+- Using logical AND
+- Function based return
+
+17. Keys in React
+Keys help react identify which items changed, added or removed in the list
+
+18. UI as tree
+In modern web application, the user interface is organized as a tree structure. Not only to the render tree but also how your dependencies and modules are arranged and compiled
+
+a)Render trees
+The render tree represents ther heirarchy of the UI elements that the browser renders on the screen. In react, the tree is built from the components you define
+
+How it works
+- Top level components - Root like App is rendered into the DOM
+- Nested components - Each component can render child component forming a nested structure
+- UI updates - When state or prop change, react re-renders this part
+
+Why is the render tree important
+- Component reusability - Smaller, focused component increases reusability
+- Performance - Optimising which component re-render can make your app faster
+
+b) Module dependecy tree
+A module dependecy tree is how the modules in your project is connected to each other. When you import one module into another, you create a link between these two
+- Heirarchy
+- Maintenece
+- Bundling
+
+c) Bundler
+A bundler takes your module dependency tree and combines all assets to form bundles for production
+
+- Compilation
+	. During the build process, bundlers compile your modern js into bundles that browser can understand
+- Loader
+	. Loader in tools like webpack (bundler) act as a tranformer. They help you import non js files or transform code before bundling
+- Code splitting
+	. Process of breaking your bundle into small chunks that can be loaded into demand
+
+19. Rendering steps
+React follows a 3 phase process everytime anything change in state, prop or context
+
+a) Triggering
+Happens when
+- setState() or useState() is called
+- Parent component rerenders
+- Props change
+- Context value updates
+
+b) Rendering 
+- React calls the component function again 
+- Build the virtual DOM tree from scratch
+- No DOM update now
+
+c) Committing
+- React compares the new virtual DOM with the old one using diffing algorithm
+- Applies only the minimal changes to the original DOM
+
+20. Rerendering
+A re-render means react is calling the component again to rebuild the virtual DOM. When does this happen
+- State or prop change
+
+21. Batching updates
+React's way of grouping mulitple groups together to avoid unncecessary re-renders
+
+22. State
+React's way of handling dynamic data inside components. Think of it as a memory for component, anything that change over time should go into state
+
+a) Behaviour
+- When state changes the component rerenders
+- State is local to the component unless lifted or shared via context
+- useState() most basic way to use state
+
+b) Queuing updates
+- React does not updates the state immediately
+- They are queued and batched to enhance performance
+
+c) Updater function
+To avoid stale state, use the updater function
+
+d) Updating object
+When state is an object, you must spread the previous state to avoid overwriting other keys
+
+e) Local Var vs State Var
+
+Local Variable
+- Doesnt cause rerender
+- Resets on every render
+
+State variable
+- Causes rerender when updated
+- Persisits across renders
+
+f) Local mutation
+Avoid mutating states directly
+
+g)Lifting state
+When two or more child components need access to the same state, 
+- Lift the state up to their common parent
+- Then pass the state amd update the function as props
+
+23. Declarative vs Imperative UI
+
+Declarative (react style)
+- Declares what UI should look like
+- React handles the step internally
+- Focus on what you should show, not to update the DOM
+
+Imperative (vanilla js)
+- Manually update the DOM, element by element
+
+24. Event handlers
+React handles events similarly to the DOM, but with few differences
+- Event names are camelCase
+- You pass functions instead of string
+
+Stop propagating - e.stopPropogation()
+Preventing default - e.preventDefault()
+
+25. LifeCycle Methods
+React components go through different phases through their life
+- Mounting - Birth
+- Updating - Growth/Change
+- Unmounting - Death
+- Error handling - Recover
+
+a) Mounting/Unmounting
+Mounting - Component is created and inserted into the DOM
+Unmounting - Component is removed from the DOM
+
+b) Phases of Lifecycle
+React class components have special methods that are called automatically during these phases
+
+c) Mounting Phase
+These methods are called when a component is added to the DOM
+
+i) constructor()
+- Initialize local state
+- Bind event handlers
+- Called once component is created
+
+ii) render()
+- Mandatory method
+- Returns JSX to be rendered
+- Pure function - Should not change state or cause side effects
+
+iii) state getDerivedStateFromProps(props, state)
+- Rarely used
+- Sync state based on incoming props
+- Should return an object to update the state or null to do nothing
+
+iv) ComponentDidMount()
+- Called after render
+- Good for
+	. Fetching data from APIs
+	. Setting timers
+	. Adding event listners
+
+d) Updating phase
+When props/state change - rerenders
+
+i) shouldComponentUpdate(nextProps, nextState)
+- Default returns true
+- Return false if need to optimize performance and no need to rerender
+
+ii) componentDidUpdate(previousProp, previousState, snapshot)
+- Called after update happens
+- Perfect for
+	. Refeching data when props change
+	. Working with updated DOM
+
+iii) getSnapshotBeforeUpdate(prevProps, prevState)
+- Called before the DOM is updated but after render
+- Must return a value or null
+- return is passed as a 3rd argument to componentDidUpdate
+
+e) Unmounting Phase
+
+i) componentWillUnmount()
+- Clears timers, remove event listners, cancel API calls ect
+
+f) Error handling phase
+- React introduce error boundaries to catch errors during render
+
+i) static getDerivedStateFromError(error)
+- Update state to show fallback UI
+
+ii) componentDidCatch(error, info)
+- Log error information
+
+26. React Hooks
+Hooks is the function that let you hook into react features inside functional components
+
+a) useState()
+- For using state inside functional components
+
+b) userRef()
+- For referencing DOM elements or persisting values without rerendering
+
+c) useEffect()
+- Run side effects (runs API calls, event listners ect.)
+
+d) useMemo()
+- Memoizes expensive computations to avoid recalculation
+
+e) useNavigate()
+- Used for navigation programically
+
+f) useCallback()
+- Memoizes a function to prevent recreation on every render
+
+g) useContext()
+- Access content data globally without props drilling
+
+h) userReducer()
+- Like useState() but for better state logic
+
+27. Props
+Input to components. Short for properties. Data is passed from parent to children
+
+a) Default prop
+- Set a default value if the parent doesnt pass a prop
+
+d) Prop drilling
+- Passing props through multiple levels even if the middle component doesnt need it
+
+28. Components
+
+a) Controlled vs Uncontrolled components
+
+i) Controlled components
+- React controls the form data
+- State is the single source of truth
+
+ii) Uncontrolled components
+- DOM controls the formdata
+- We use refs to access it
+
+b) Higher order components
+- Functions that take a component and return a component
+- Used for reusing component logic
+
+c) Pure components
+- Avoid rerendering if props/state havent changed
+
+29. React router
+Client side routing in react apps. Switches components without loading the full page
+
+a) Install
+- npm install react-router-dom
+
+b) Hooks
+
+i) Navigate
+- New hook to navigate programmatically

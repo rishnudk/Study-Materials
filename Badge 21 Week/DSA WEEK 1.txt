@@ -1,0 +1,305 @@
+DSA WEEK 1
+
+Data structures are fundamental concept of computer science, plays a crucial role in how we store, organize and store data in digital world. Data structure is a way of storing and organizing data in a computer so that it can be accessed and processed efficiently.
+They provide a way to store and organize large amount of data in efficient manner, making it easier to process and manipulate. If you have a list of one million users, and you need a specific name. If you simply store the names in a single list, it would take a lot of time to search for a specific name. If you organize the names in data structures like binary tree, you could find the name in a fraction of a second.
+They help reduce the amount of time and space required to solve the problem. There are many algorithms to use for different problems, some algorithms are efficient than others and will sort the data more efficiently.
+
+Types of data structures:
+There are many types of data structures and each one is designed to solve a specific problem.
+1. Array: Simple data structure which can be accessed by its index.
+2. Linked Lists: Data structure that consists a series of nodes each of which consists of a piece of data and a reference to the next node in list.
+3. Stack: A stack is a data structure which implements the Last-in-First-Out (LIFO) principle.
+4. Queues: Queue is a data structure which uses the First-in-First-out principle.
+5. Trees: Data structure which consists of a series of nodes, each of which contains a piece of data and the reference to one or more child nodes.
+6. Graphs: Data structure consisting of a collection of nodes and edges which represent the relation between the nodes.
+
+Algorithms
+It is a step of instructions that can be followed to solve a problem. Algorithms are used for performing various task such as searching for information, sorting, optimising data. Algorithms need to be designed in a way which is both effective and accurate.
+Efficiency is an important part of algorithms, goal is to find solution to a problem as quickly as possible. To achieve the desired output, it should be ensured that the algorithm is well structured, and it uses appropriate data and operations to produce the desired results. Accuracy is an important factor in algorithm design, as the output must meet the desired criteria.
+The purpose of an algorithm is to take input data and transform it into an output that satisfies the criteria.
+The goal of an algorithm is to find the solution of a problem very quickly. There are different types of algorithms each with its own strength and weakness. Each algorithm is used for solving specific types of problems. Some are designed to run on large datasets while some are used on small data.
+In conclusion algorithms play a important part in solving problems effectively and efficiently.
+
+Big O
+Big O notation is a mathematical notation that is used to describe the upper bound on the growth rate of the running time of an algorithm. used to analyse and compare the performance of different algorithms in computer science.
+Big O notation express the relation between the size of the input and the number of operations required to solve the problem for that input. The size of operation is usually expressed as 'n' and the number of operation is expressed by the letter 'O'. The term Big O is used to indicate that the number of operation grows at most linear with n. If we have a n steps to solve an algorithm with the size n, the algorithm would have the complexity of O(n).
+
+Some common time complexities in Big O notation include:
+1. O(1): Number of operations does not depend on the size of the input.
+2. O(log n): Number of operation grows logarithmetically with n.
+3. O(n): Number of operation grows linearly with n.
+4. O(n log n): Number of operations grows as n log n.
+5. O(n^2): Number of operations grows as n squared.
+6. O(2^n): Number of operations grows exponentially with n.
+Big O notation provides an upper bound on the growth rate of the running time of an algorithm and not the exact running time.
+
+
+----------------
+
+
+1. Algorithms
+
+Algorithms are a step by step procedure or a set of rules to solve a specific problem. Takes an input, performs a series of steps and produces an output.
+Types of algorithm:
+1) Search algorith (Linear, Binary search)
+2) Sorting algorithm (Bubble sort, Quick sort)
+3) Recursion based algorithm 
+4) Graph algorithm
+5) Dynamic programming algorithm
+
+1)Search Algorithm
+a) Linear search (O(n)): Search for an element one by one until found or end is reached. Works for both sorted and unsorted arrays. Best for small and unsorted arrays.
+Time Complexity:
+- Worst case: O(n) Element at the end or not present
+- Best Case: O(1) Element found at the beginning
+
+b) Binary search (O(log n)): Works only on sorted arrays. Divides the array into halves and eliminate one half at each step.
+2 types - Iterative binary search and Recursive binary search
+Time complexity:
+- Worst case: O(log n)
+- Best case: O(1) If middle element is target
+
+2. Recursion 
+
+Recursion is a technique where a function calls itself to break a problem into smaller subproblems. Continues until a base case is met. Key parts of recursion:-
+1) Base case: The stopping function which prevent infinite loops
+2) Recursive case: Function calls itself with a smaller input
+eg:- Factorial, Fibonacci sequence
+
+3. Iterative and Recursive
+
+Iterative: 
+a) Uses loops for repeat operations
+b) Memory efficient since doesnt use call stack
+c) Better in performance in many cases
+Recursive:
+a) Calls itself with a smaller approach 
+b) Uses call stack which use extra memory
+c) Intuitive for problems like tree traversal and divide & conquer
+
+4. Virtual Memory
+
+Virtual memory is a memory management technique used by operating systems. It extends physical ram by using a portion of the hard drive as extra memory.
+Why is it needed?
+- When RAM is full, the OS swaps inactive memory pages to disk.
+- Allows running large applications that need more memory than available RAM.
+- Prevents crashed when memory is exhausted.
+How it Works?
+- Paging: RAM is divided into small chunks(pages). If a page isnt used, its moved to the hard drive.
+- Swapping: When needed, the pages are brought back from disk to the RAM.
+eg:- Running multiple chrome tabs.
+
+5. Amortized Resizing(Dynamic Arrays)
+
+It is a method used to analyze the worst case performance over multiple operations rather than a single operation.
+eg:- Dynamic Arrays (Resizing in Array.push())
+When a dynamic array reaches its capacity, it needs to resize by allocating a larger array and copying elements over.
+
+6. Dynamic Programming
+
+DP is an optimization technique used to solve problem by breaking them into smaller subproblems and storing results to avoid redundant computations.
+When to use DP?
+- Overlapping subproblems
+- Optimal substructure
+
+a) Memoization approach(top-down): Recursion + Caching. Solve top-down(from main problem to smaller subproblems). Store result of solved subproblems in a cache to avoid recomputation.
+b) Bottom up approach(Tabulation): Iterative + Table. Solve bottom-up(start from the smallest subproblems and build up). Uses less memory than recursion.
+ 
+8. Complexity Analysis
+
+Complexity analysis helps us understand how efficient an algorithm is in terms of time(speed) and space(memory usage).
+1. Time complexity: Time complexity tells us how the execution time of an algorithm increases as the input size grows.
+O(1) - Constant time - Accessing an array element
+O(log n) - Logarithmetic time - Binary search
+O(n) - Linear time - Looping through an array
+O(n log n) - Linearithmetic time - Merge sort, Quick sort
+O(n^2) - Quadratic time - Recursion without memoization
+O(2^n) - Exponential time - Recursion without memoization
+O(n!) - Factorial time - Travelling salesman problem
+2. Space complexity: Space complexity tells us how much memory an algorithm uses based on input size.
+O(1) - Constant space - Storing a few variables
+O(n) - Linear space - Storing an array of size n
+O(n^2) - Quadratic space - Storing a 2D matrix
+O(n!) - Factorial space - Storing all permutations
+
+9. Asymptomic notations
+Asymptomic notation helps us describe the performance of an algorithm as the input size grows. They measure how execution time changes with input size n.
+a) Ranking of asymptomic notations
+b) Big O notation
+c) Omega notation 
+d) Theta notation 
+
+10. Memory 
+
+Memory plays a crucial role in data structures and algorithms because it determines how efficiently data is stored accessed and manipulated.
+
+11. Memory allocation
+
+Memory allocation is how a computer assigns memory to variables, data structures and processes. Efficient memory allocation is crutial for optimising speed, storage and performance.
+a) Bit vs Byte
+A bit (short for binary digits) is the smallest unit of memory in a computer. It can store only two values 0 or 1. Bits are grouped together to form large data units.
+A byte consists of 8 bits and is the standard unit of storage in computers. 1 byte = 8 bits. Bytes are stored in characters, numbers and other data.
+b) Memory Address
+A memory address is a unique location where data is stored in RAM. Each byte in memory has a unique address. The CPU accesses data using these addresses. Addresses are represented in hexadecimal format.
+c) Continuous memory allocation
+Continuous memory allocation means allocating memory in a continous block. Each process or data structure is stored in a single, continous block of memory. Memory fragmentation is reduced, leading to a faster access time.
+d) Non continuous memory allocation
+Non continuous memory allocation splits memory into seperate blocks stored at different locations. Instead of allocating one large block, smaller blocks are assigned wherever free memory is available. The OS uses pointers to keep track of the scattered memory locations.
+e) Stack Memory
+The stack is a small, fast memory area use for storing primitive data types, function call details, follows last-in-first-out order.
+Features:
+- Fast allocation and deallocation
+- Efficient for function calls and local variables
+- Limited in size
+f) Heap memory
+The heap is a larger, dynamic area used for storing reference types (arrays, objects, functions), data that needs to persist beyond a function call.
+Features:
+- Used for large and dynamic data structures
+- Persists beyond function calls
+- Slower than stack memory
+- Requires garbage collection to free unused memory
+
+12. Memory Leak
+
+A memory leak occurs when allocates memory but fails to release it, leading to increased memory consumption over time. This happens when references to unused objects remain, preventing the garbage collector from freeing the memory.
+a) Symptoms of memory leak:
+- Increasing memory over time - If your application uses more and more memory without freeing it, it may cause memory leak.
+- Slower performance over time - As memory gets filled, the program struggles to allocate new memory efficiently. You may notice lagging, unresponsiveness or delays in execution.
+- Frequent garbage collection activity - Garbage collection tries to free up memory, but if there is a leak, GC runs more frequently, affecting performance.
+- Application crashes - If your memory keeps growing, your application might crash due to an Out of Memory error. Happens in long runnig apps like servers, gaming applications or browsers.
+b) Garbage collection:
+Automatic memory management process that removes unused objects from memory, preventing memory leaks. It mainly works in languages like JS, python, Java.
+- Process - Garbage collectors track object references and removes objects that are no longer accessible.
+Step 1: Identify reachable objects
+- GC starts from the root objects.
+- Traces all references to find objects that are still being used.
+Step 2: Mark and Sweep algorithm
+- Mark Phase - GC marks all reachable objects
+- Sweep Phase - GC removes unreferenced objects, freeing up memory
+c) Reasons for memory leaks:
+Even with gargabe collection, memory leaks can happen when references to unused objects remain.
+- Variables stored in global scope never cleaned up
+- Event listners keep objects alive even if not needed
+- Inteval keeps running indefinitily
+- Function keeps references to variables inside them 
+d) How to debug memory leaks
+- Monitor memory usage - Devtools - Memory tab
+- Track long living objects - Devtools - Performance tab, checks memory over time
+- Check for unused refernces - console.log(performance.memory)
+
+13. Big O Notation
+
+Used to describe the efficiency of an algorithm in terms of time or space as the input size grows.
+- Helps compare different algorithms
+- Predicts performance for larger input
+- Helps optimize code for efficiency
+a) O(1) - Constant time complexity - Time does not change with input size - Accessing an array
+b) O(N) - Linear time complexity - Time increases proportionatly with input size - Looping through an array
+c) O(N^2) - Quadratic time complexity - Time grows exponentially with nested loops - Nested loops
+d) O(N^3) - Cubic time complexity - Time complexity increases with 3 nested loops - 3D Matrix traversal
+e) O(log N) - Logarithmetic time complexity - Time complexity decreases as input grows - Binary search
+f) O(2^N) - Exponential time complexity - Time doubles with new input - Recursive fibonacci
+
+14. Operations in Normal Array 
+
+a) Initialization - Init - O(1)
+b) Setting a value - Set - O(1)
+c) Getting a value - Get - O(1)
+d) Traversing an array - O(N)
+e) Insertion - O(N) Worst case 
+Insertion at the end - O(1)
+Insertion at the beginning, middle - O(N)
+f)Deletion - O(N) Worst case
+Deletion at the end - O(1)
+Deletion at the middle, beginning - O(N)
+
+15. DS
+
+A data structure is a way to organize, store and manipulate data efficiently. It defines how data is stored in memory and how operations like insertion, deletion and searching can be done efficiently.
+Data structures can be classified into two types:
+- Linear Data structure (Elements are arranged sequentially)
+Array, Linked list, Stack, Queue
+- Non-Linear data structure (Elements are arranged hierarchially)
+Tree, Graph, Hash Table
+
+16. What is data structure?
+
+A data structure is a way of organizing and storing data so that it can be accessed and modified efficiently.
+
+17. Advantages and disadvantages of DS
+
+Advantages:
+- Efficiency
+- Reusability
+- Abstraction
+- Scalability
+- Better memory management
+Disadvantages:
+- Increased Complexity
+- Extra memory usage
+- Performance trade-offs
+
+18. Examples
+
+a) DOM (Document Object Model) - DOM is a tree like representation of an HTML document. Each element ini the document is a node in the tree.
+b) Undo and Redo (Stack data structure) - Undo and redo opreators in text editors are implements using stacks.
+
+19. Dynamic Array
+
+A dynamic array is an array which can grow and shrink in size dynamically at runtime. Unlike static arrays, dynamic arrays adjust their capacity when elements are added or removed.
+Key features:
+- Resizable
+- Efficient access
+- Uses extra memory
+a) How does the dynamic array work?
+A dynamic array starts with an initial fixed size. When array is full it creates a array with double the size, copies the element and deletes the old array.
+b) Memory allocation 
+Dynamic arrays uses heap memory. When resizing
+- New memory block is allocated
+- Elements are copied from the old to new one
+- Old array is deleted and reference is updated
+
+20. Linked list
+
+A linked list is a linear data structure where elements (nodes) are stored in non-continous memory locations and linked using pointers. Each node contains data(value), pointer(next).
+a) Advantages
+- Dynamic size
+- Efficient insertion and deletion
+- No memory wastage
+Disadvantages
+- Extra memory usage
+- Slow access
+- More complex
+b) Applications of linked list
+- Dynamic memory allocation
+- Undo/Redo operations
+- Hash tables
+- Browser history
+- OS process scheduling
+- Music/Playlist navigation
+c) Creating a linked list
+- Create a Node class
+- Create a linked class list
+- Append function
+- Print function
+- Use the linked list
+d) Operation
+i) Initialization - When we create a linked list, we initialize it with an empty head.
+ii) Set - Find the node and modify its value
+iii) Get - Retrieve a value by index
+iv) Traverse - To go through all nodes in the list
+v) Insert - To insert a new node at a given index
+vi) Delete - To remove a node at a given position
+e) Singly linked list
+A singly linked list consist of nodes where each node contains a value, a next pointer.
+f) Doubly linked list
+A doubly linked list is similar to SSL but has an extra pointer that points to the previous node. Each node contains a value, a next pointer, a prev pointer.
+g) Circular linked list
+The last node's next pointer points back to the first node instead of null. In doubly circular linked lists, the first node's prev pointer also points to the last node. No null values exists in the list.
+h) Array vs Linked List
+Memory - Contigous - Non contigous
+Access - O(1) - O(n)
+Insertion - O(n) - O(1)
+Deletion - O(n) - O(1)
+Resizing - Fixed size - No resizing
+Cache Usage - Efficient - Less efficient

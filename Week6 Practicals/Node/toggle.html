@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<label >
+    <input type="checkbox" id="myCheckbox"> checkbox<br>
+</label>
+    <button type="button" id="button">button</button>
+
+    <script>
+        const button = document.getElementById('button')
+        const checkbox = document.getElementById('myCheckbox')
+
+        button.addEventListener('click', () => {
+            checkbox.checked =!checkbox.checked
+        })
+    </script>
+</body>
+</html>

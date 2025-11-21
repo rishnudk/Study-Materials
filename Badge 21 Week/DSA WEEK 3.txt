@@ -1,0 +1,353 @@
+DSA WEEK 3
+
+1. Tree
+A tree is a non linear hierarchical data structure with the following properties
+- Consist of nodes connected by edges
+- There is one root node 
+- Every node has zero or more children
+- There is exactly one route between any two nodes
+
+Uses of trees
+- File systems
+- Database indexing
+- AI and decision making
+- Network routing
+- Data compression
+- Game development
+
+Basic tree terminologies
+- Root - Topmost node
+- Parent - A node that has child nodes
+- Child - Nodes that descend from another node
+- Leaf - A node with no children
+- Sibling - Nodes with same parent
+- Ancestor - Any node that appears above a given node
+- Descendant - Any node that comes below a given node
+- Path - A sequence of nodes and edges connecting two nodes
+- Distance - The number of edges in the shortest path between two nodes
+- Degree - The number of children a node has
+- Depth - The number of edges from a root to a node
+- Height - The number of edges on the longest path from a node to a leaf
+- Edge - The connection between two nodes 
+- Subtree - Any tree that is part of the larger tree
+
+Types of trees on Nodes
+i) Binary tree:
+- Each node can have a maximum of two children
+- Used in sorting, searching and parsing expressions
+ii) Ternary Tree
+- Each node can have maximum 3 children
+- Used in ternary search trees for efficient string searching
+- More memory efficient than a full K-array tree
+iii) K-ary tree
+- Each node can have atmost k children
+- Binary tree K=2 and K=3 are specials cases of K-ary tree
+iv) Threaded binary tree
+- A threaded binary tree where null pointers are replaced with threads
+- Threads help in in-order traversal without recursion or stack usage
+- Used for efficient traversal when we dont want to use extra money
+
+Types of nodes on structure
+i) Complete tree
+- All levels except the last one is filled
+- The last level is filled from left to right
+ii) Full tree
+- Every node has either 0 or 2 children
+iii) Perfect tree
+- All leaf nodes are on the same level
+- Every internal node has exactly 2 children
+
+Degenerated tree
+A degenerated tree is a tree where each parent node has only one child, making it look like a linked list. This happens when the list is unbalanced, leading to inefficient operations.
+i) Left Skewed tree
+- Each node has only one child
+- Goes from top to left
+ii) Right skewed tree 
+- One child per node	
+- Goes to the right	
+
+2. Binary search tree
+BST vs BT
+- BST
+i) A special binary tree where left < root < right
+ii) Left subtree < Root < Right Subtree
+iii) O(n log n) in a balanced BST
+-BT
+i) A general tree where a tree has atmost 2 children
+ii) No specific order of trees
+iii) O(n) in worst case
+
+Uses of BST
+BSTs are used when fast searching, insertion, deletion are needed
+- Database indexing
+- Auto suggestion in search engines
+- Symbol table in compilers
+- Routing tables in networking
+- Self balancing BSTs for ordered data storage
+
+Balanced vs Unbalanced BSTs
+- Balanced BST
+i) The tree is roughtly the same size on both sides
+ii) O(log n)
+-Unbalanced BST
+i) One side is much deeper than the other (like a linked list)
+ii) O(n) worst case
+
+Properties of a BST
+A binary search tree follows these rules
+- Left subtree contains nodes < root
+- Right subtree contains nodes > root
+- Left and right subtrees are also BSTs
+- No duplicate values
+
+Operations
+- Insertion in BST
+i) If the tree is empty make the new node the root
+ii) If the value is smaller than the root, go left
+iii) If the value is greater than the root, go right
+iv) Repeat the process recursivily until a empty spot is found
+- Deletion in BST
+i) Leaf node - Just remove it
+ii) One child - Replace the node with its child
+iii) Two child - Find inorder succession, replace node and delete successor
+
+Traversal in BST
+Traversal means visiting all the nodes of a tree in a specific order. Two main types of traversal in BST:
+i) Depth-First-Search (DFS)
+- InOrder (Left -> Root -> Right)
+- PreOrder (Root -> Left -> Right)
+- PostOrder (Left -> Right -> Root)
+ii) Breadth-First-Search (BFS) / Level Order Traversal
+
+Depth-First-Search
+DFS explores as deep as possible before backtracking
+i) InOrder
+- Visits the left subtree first
+- The prints the root
+- Finally visits the right subtree
+ii) PreOrder
+- Visits the root first
+- Then explores the left subtree
+- Finally visits the right subtree
+iii) PostOrder
+- Visits the left subtree first
+- Visits the right subtree
+- Prints the root
+
+Breadth-First-Search / Level Order Traversing
+BFS explores all nodes at one level before going deeper
+- Uses a queue (FIFO order)
+
+3. Balanced Search Tree
+Balanced search tree ensures that the height of the tree remains logarithmetic, preventing worst case scenarios of unbalanced trees.
+i) AVL Tree
+- Named after its inventors (Adelson and Landis)
+- Self balancing binary search tree where the height difference (balance factor) between the left and right subtree is at most 1
+- If the balance factor exceeds one, rotations are performed to restore balance
+- Operations : Insertion, deletion, Rotations
+ii) Red-Black tree
+- A self balancing binary search tree with extra properties
+- Each node is either red or black
+- The root is always black
+- Red nodes can't have red children (no two consecutive red nodes)
+- Every path from the root to the null leaf must contain the same number of black nodes
+- Balancing occurs by recoloring and rotations
+iii) Prefix tree
+- A tree datastructure for storing strings efficiently
+- Each node represents a character of a word
+- Used in autocomplete, dictionary implementations and IP routing
+iv) M-Way search tree
+- A generalization of BST where nodes can have more than 2 children
+- Ensures that data remains sorted and allows efficient searching
+- B- Tree
+. A self balancing search tree used in database and file systems
+. Nodes have multiple children
+. Each node contains multiple trees and search is performed in a range
+. Ensures log-time-searching, insertion and deletion
+- B+ Tree
+. A variation of B- tree, but leaf nodes are linked to allow efficient range searches
+. All keys are stored in leaf nodes, while internal nodes only store pointers to child nodes
+v) Merkel Tree
+- A binary tree used in cryptography and blockchain
+- Each leaf node contains a hash of data block and parent node contain hash of child nodes	
+- Used for efficient and secure data validation
+
+4. Heap
+A heap is a special binary data structure that satisfies the below property
+- Min Heap - The parent node is always smaller than the child nodes
+- Max Heap - The parent node is always larger than the child nodes
+
+Finding child and parent in a heap
+In heap, nodes are stored in array representation, and their positions are derived automatically
+For a node at index i,
+- Left child - 2 * i + 1
+- Right child - 2 * i + 2
+- Parent - (i - 1) / 2
+
+Operations
+- Heapify - Process of converting an unordered array into a heap structure
+- Insert - Adding the element to the end of the array. Perform heapifyUp
+- Delete - Delete the element at the front of the array. Perform heapifyDown
+
+Bottom-Up Heapify
+- Used when building a heap from an unordered array
+- Start from the last non-leaf node (n/2)-1
+- Compare it with children and swap if necessary
+- Continue heapifying downwards
+
+Top-Down Heapify
+- Used when inserting an element into an existing heap
+- We insert the element into the last position
+- Swap up the tree to find its position if necessary
+
+DEPQ (Double-ended priority queue)
+It is a priority queue that allows both min and max operations. It can be implemented using two heaps
+- Min-Heap - Stores the smaller half of the elements
+- Max-Heap - Stores the larger half of the elements
+
+5. Trie
+A trie is a tree like structure used for string searching, prefix matching and autocompletion. Each node represents a character and words are formed as paths from the root to the leaf nodes.
+Key features of trie:
+- Efficiently handles prefix searches
+- Provides fast lookups
+- Useful for dictionary applications, autocomplete and IP routing
+
+Trie operations
+- Initialization(Init) - Create the trie structure
+- Insertion(Insert) - Add a word to the trie
+- Search - Check if a word exists in the trie
+- Deletion - Remove a word from the trie
+
+Initialization 
+A trie consist of nodes where each node
+- Stores children, a mapping of characters to trie nodes
+- Has an isEnd flag to indicate the end of the word
+
+Insertion
+- Traverse the trie from the root
+- If a character doesnt exist in the trie, creata a new node
+- At the last character mark isEnd = true
+
+Search
+- Travese the trie character by character
+- If a character doesnt exist return false
+- At the last character check isEnd = true
+
+Delete
+- Reursively traverse down to the last character
+- Unmark isEnd at the last character
+- Remove unused nodes if necessary
+
+6. Prefix and Suffix tree
+A prefix tree(trie) is used to store and search words effectivily. A suffix tree is optimized for substring searches by sorting all suffixes of a string.
+- Prefix tree - Stores words such that common prefixes are shared
+- Suffix tree - Stores all suffixes of a string for fast substring searches
+
+Terminator character 
+- Used in suffix tree to mark the end of a word
+- Helps in extract suffix searches and avoids confusion in overlapping words
+
+Compressed trie
+A compressed trie is a space optimized-trie that 
+- Merges single child paths into one node
+- Stores prefixes in one node instead of splitting into multiple levels
+
+7. Graph Data stucture
+A graph is a collection of vertices(nodes) connected by edges(links)
+Basic Terms:
+- Vertex(Node) - A point in the graph
+- Edge(Link) - A connection between two vertices
+- Directed graph - Edges have direction
+- Undirected graph - Edges do not have direction
+- Weighted graph - Each edge has a weight/cost
+- Cyclic graph - Contains atleast one cycle
+- Acyclic graph - No cycles
+
+Adjacency list
+An adjacency list is one of the most efficient ways to represent a graph. It stores each vertex along with a list of its adjacent vertices
+- Using a linked list - Each vertex maintains a linked list (or an array) of all its directly connected vertices
+- Time Complexity
+. Retreiving all neighbours takes O(1) (accessing a list)
+. If iterating through n vertices, it takes O(n)
+- Space Complexity
+. Store V vertices - O(V)
+. Each edge is stored twice (once for each vertex) - O(E)
+. Total space complexity - O(V+E)
+
+Adjacency matrix
+An adjacency matrix is a way of representing a graph using a 2D array. If a graph has v vertices, then the adjacency matrix is a VxV matrix where,
+- matrix[i][j]=1 where there is an edge between i and j
+- matrix[i][j]=0 if there is no edge
+Time complexity
+- Checking whether an edge exists O(1)
+- Adding or removing an edge O(1)
+Space complexity
+- Requires VxV space O(V^2)
+- Dense graphs(many edges) - Good choice
+- Sparse graphs - Wasteful memory 
+
+Spanning tree
+A spanning tree of a graph is a subgraph that includes all the vertices of the original graph but contains only a subset of the edges, forming a tree
+- If a graph has V vertices, the spanning tree has exactly V-1 edges
+- A connected graph can have multiple spanning trees
+
+Minimum Spanning tree
+A minimum spanning tree is a spanning tree where the sum of the edge weights is minimized. Algorithms to find MST
+- Krusals Algorithm
+. Sort all edges in the insreasing order of weight
+. Pick the smallest edge that doesnt form a cycle
+. Continue until V-1 edges are selected
+. Time complexity O(E log E) where E is the number of edges
+- Prims Algorithm
+. Start from any node
+. Repeatedly pick the smallest edge that connects a visited vertex to an unvisited one
+. Uses a min heap for efficient selection
+. Time complexity O(E log V)
+
+Graph indexing
+It is used to efficiently search and query large scale graphs. It helps in optimizing graph operations like path finding, neighbour lookup and shortest path queries.
+- Vertex Centric Indexing
+. Focuses on indivitual nodes (vertices) and stores their relationships
+. Data structures used - Adjacency list, B-trees or hash trees
+- Edge centric indexing
+. Focus on edges rather than nodes
+. Data structures used - Edge list stored in sorted order, Compressed sparse row
+. Useful when traversal and relationships are more important than indivitual node properties
+
+Types of Graph
+- UniDirectional Graph (Directed graph)
+. Edges have a direction (A -> B means A lead to B and not vice versa)
+- BiDirectional Graph (Undirected Graph)
+. Edges have no direction (A <-> B means A is connected to B and vice versa)
+- Cyclic Graph
+. Contains atleast one cycle
+- Disconnected Graph
+. Some nodes are not connected to the rest of the graph
+- Weighted graph
+. Edges have weights (cost, distance, time ect.)
+- Unweighted graph
+. Edges do not have weights (just connections)
+- Bipartite graph
+. Vertices can be divided into two sets and edges only connect nodes from different sets
+
+Traversal
+Graph traversal means visiting all the nodes of a graph in some order. The two most common traversal methods are BFS (Breadth-first-search) and DFS (Depth-first-search)
+
+Breadth-First-Search
+- Explores level by level
+- Uses queue
+- Best for finding short paths in an unweighted graph
+BFS Algorithm
+- Start from a given node
+- Mark it as visited and enqueue it
+- While the queue is not empty, 
+. Dequeue a node
+. Visit all unvisited nodes and enqueue them
+
+Depth-First-Search
+- Explore as deep as possible before backtracking
+- Uses stack
+DFS Algorithm
+- Start from a given node
+- Mark it as visited
+- Visit each unvisited adjacent node recursivily

@@ -1,0 +1,546 @@
+Second Domain - Node js
+
+1. Nodejs
+- Runntime environment that lets you run js on the server side
+- Javascript v8 engine
+- Non blocking, event driven
+
+2. V8
+- Js engine developed by google for chrome
+- Compiles js to machine code
+
+3. Advantages and Disadvanteges	
+
+Advantages
+- Fast performance
+- Non blocking IO
+- JS everywhere
+- Tons of package
+- Great for real time apps
+
+Disadvantages
+- Not ideal for CPU heavy tasks
+- Callback hell
+- Single threaded
+
+4. Node working
+- Event driven, single threaded model with non blocking IO
+- When a task takes time
+	- Delegates to the system
+	- Fires an event callback to take the result
+- Behind the scenes, libuv+event loop handles the flow
+
+5. Libuv
+- C++ library that provides
+	- Event loop
+	- Thread pool
+	- Async I/O operations
+- Gives node its asynchronous behaviour
+- Node gives heavy task to libuv in the background and returns the task once completed
+
+6. Node module system
+
+3 types of modules
+- Built in modules
+- User defined modules
+- Third party modules
+- Use require to import
+
+7. Concurrency vs parallelism
+
+Concurrency
+- Ability to handle multiple task by switching between them
+- Node handles multiple I/O operations even though single threaded
+
+Parallelism
+- Actual simultaneous execution of tasks
+- Not nodes default behaviour, acheived through worker threads and libuv thread pool
+
+8. REPL and CLI
+
+REPL (Read-eval-print-loop)
+- Command line tool that lets you run js directly
+
+CLI (Command line interface)
+- Run node scripts in the terminal
+
+9. npx
+- Tool that comes with npm
+- Used to execute packages without installing them globally
+
+10. Globals
+ 
+__dirname
+- Absolute path of the directory
+
+__filename
+- Absolute path of the current file
+
+module
+- Info about the current module
+
+process
+- Access to runtime environment info
+
+11. Modules
+
+Core modules
+- Built in modules
+
+Local modules 
+- Custom modules you write
+
+Third party modules
+- Installed via npm
+
+12. Npm (node package manager)
+
+Local installation
+- Into the projects node_modules folder
+
+Global
+- Installed for any use from any terminal
+
+13. Package json
+
+Describes your project and dependencies
+
+14. nodemon
+
+15. Package lock json
+
+- Automatically created when installing dependencies
+- Locks the version of dependencies
+- Ensure same setup for all developers using your project
+
+16. Event loop in nodejs
+
+- Allows node to perform asynchronous operations
+- When node hits async operations, offloads them to system/libuv
+- When async work completes, results are queued
+- Event loops picks them and executes corresponding callbacks
+
+17. Event queue
+- Queues that hold callbcks waiting to be executed
+- When a async operation is completed, calllback is pushed to the event queue
+- Event loop picks callback from the queue and is executed
+
+18. Events
+
+Node is built on a event driven architercture using the events module
+
+EventEmitter
+- Used to create, emit and listen to events
+
+Http server
+- Core module to create server without express
+
+19. Streams
+- Used to handle large amounts of data in chunks rather than all at once
+
+Types of Streams
+- Readable
+- Writable
+- Duplex
+- Transform
+
+createReadStream()
+- Used to read large files in chunks
+
+readFile()
+- Asynchronous - Non-blocking
+
+readFileAsync()
+- Synchronous - Blocking
+
+pipe()
+- Connects a readable stream to a writable stream directly
+
+Buffer
+- Temporary memory containter for binary data
+
+20. Cron jobs
+
+Used to schedule tasks at specific times
+
+Cron-format - * * * * * *
+
+21. CORS (Cross origin resource sharing)
+
+Security feature that controls how data is shared between origins (one domain to another)
+
+Preflight request
+- Sent before the main request
+- Headers send in preflight
+	- OPTIONS method
+	- Access-control-request-Method
+	- Access-control-request-Headers
+
+22. Cluster
+
+Node is single threaded, Cluster allows you to fork the process to use multiple CPU cores
+
+23. Multithreading in nodejs
+
+Means a program can multiple tasks simultaneously by dividing it into multiple threads
+
+24. Thread pool
+
+Node uses libuv thread pool to handle non blocking I/O operations behind the scenes
+
+25. Worker threads
+
+Threads used for multithreading. Used to take tasks from the main node process
+
+26. Cluster vs Worker threads
+
+27. Child process
+
+Used to run external process from node
+
+fork()
+- Runs another node script with a communication channel	
+
+exec()
+- Runs a shell command, buffers output
+
+execFile()
+- Runs an executable file directly
+
+spawn
+- Used for streaming large outputs
+
+Spawn vs Fork
+
+child.process.fork() vs cluster.fork()
+
+28. HTTP
+
+HTTPS
+- HTTP + SSL/TLS = HTTPS
+- Secures HTTP using encryption
+- Ensure data is private
+
+Http working
+- Request-response protocol between client and server
+- Client - sents request
+- Server - sents response
+- Each interaction is stateless
+
+How SSL certificate works
+- SSL/TLS encrypts the communication
+- Server sends the SSL certificate
+- Browser verifies the certificate
+- If valid, enables HTTPS
+- Prevent eavesdropping, MITM attacks
+
+Default ports
+- HTTP - 80
+- HTTPS - 443
+
+Request/Response cycle
+- Browser sents a request to server (/home)
+- Server process it
+- Server returns a response (HTML page)
+- Browser renders it
+
+Stateless protocol
+- Http doesnt store data between requests
+- Each request is independent and server doestn know unless provided
+- Managing state
+	- Sessions
+	- Cookies
+	- Localstorage
+
+HTTP request
+- General
+	- Method - GET, POST, PUT ect.
+	- Target URL
+	- Version
+- Headers 
+	- Provide meta info
+- Body
+	- For POST, PUT ect.
+
+HTTP response
+- General 
+	- Version
+	- Status code - 200, 404, 500 ect
+	- Status text 
+- Headers
+	- Meta data
+- Body
+	- Contains the actual data - HTml, Xml ect.
+
+HTTP methods
+- These define what the client wants to do with the server
+
+GET
+- Retrieve from the server
+- Not modify anything
+- Idempo
+
+POST
+- Create a new resource
+- Not idempotent
+
+PUT
+- Replace an existing resource completely
+- Idempotent
+
+PATCH
+- Partially update and existing resource
+- Idempotent or not idempotent
+
+DELETE
+- Delete a resource
+- Idempotent
+
+HEAD
+- Same as GET, returns only headers and no body
+- Used to check the availability of metadata
+
+CONNECT
+- Used to establish a tunnel (For HTTP through HTTP proxies)
+- Rarely used 
+
+OPTIONS
+- Used for cors and preflight
+- Returns supported methods and headers
+
+TRACE
+- Echoes the recieved request back to the client
+- For testing/debugging
+
+Idempotent methods
+- Same request - same changes - no side effects
+
+Safe methods
+- Methods that dont change anything
+
+User-agent 
+- Header sent by the client to identify itself
+- Logging, detecting bots, Serving mobile vs laptops
+
+Headers
+- Metadata sent along with req/res
+
+writeHead() vs setHead()
+
+writeHead()
+- Before writing body
+- Can overwrite
+
+setHead()
+- Just before response is sent
+- Cannot overwrite (only once)
+
+HTTP status codes
+
+1xx - Informational
+100 - Continue
+101 - Switching protocols
+102 - Processing
+103 - Early hints
+
+2xx - Success
+200 - Success
+201 - Created
+202 - Accepted 
+204 - No content
+
+3xx - Redirection
+301 - Moved permemnantly
+302 - Found
+304 - Not modified
+
+4xx - Client errors
+400 - Bad request
+401 - Unauthorized
+403 - Forbidden
+404 - Not found
+409 - Conflict
+422 - Unprocessable entity
+
+5xx - Server errors
+500 - Internal server error
+502 - Bad gateway
+503 - Service unavailable 
+504 - Gateway timeout
+
+MIME type (Multipurpose mail extension)
+- Standard way to indicate the nature and standard of a document
+- Used in HTTP headers to tell browsers to handle content
+- Example - text/html, application/json, image/png
+
+HTTP/2
+- A major revision of HTTP network protocol
+
+TCP and IP
+- TCP (Transmission control protocol) - Reliable, connection oriented protocol that ensures data are delivered in order and without errors
+- IP (Internet protocol) - Routes data packets between source and destination
+
+29. XSS (Cross site scripting)
+- A security vulnerability that allows attackers to inject malicious scripts into web pages
+- Stored XSS, Reflected XSS, DOM-based XSS
+
+30. CSRF (Cross site request forgery)
+- Tricking user into doing actions on the web and taking information about the user
+- Prevent by 
+	- Using CSRF tokens
+	- Verifying same site cookies
+	- Double submit cookies
+
+32. SQL Injection
+- Code injection technique used to exploit vulnerabilities
+
+Prepared statements
+- Secure way to run sql queries with user input
+- Prevent SQL injection from seperating sql query from data
+
+33. Express
+- Flexible Nodejs framework
+- Used to build apis and web servers
+- Handling routes, middlewares ect. much easier
+
+34. npm install express --save
+
+35. app=express()
+
+HTTP methods in Express
+- get() - Handles get req
+- res.status(code) - Set http status code
+- res.send() - sends a response
+- res.sendFile() - sends a file as a response
+
+- post() - Handles post requests
+- express.urlencoded() - Middleware to parse urlencoded data
+
+- put() - Used to replace existing data
+- patch() - Used for partial update
+- delete() - Used to delete data
+- all() - Handles all http methods
+- use() - Applies global middleware
+- listen() - Start the server and listen on port
+
+36. Static files in express
+
+Public folder
+- Used to server static files
+
+express.static()
+- Middleware to server static files from a directory
+
+37. API (Application programming interface)
+- A way for applications to communicate with each other
+
+38. Params vs query string
+
+Params (Route parameter)
+- Part of url path, used for dynamic values
+
+Query string
+- Data send in the url after the ?, used for filtering and searching
+
+40. Query string/Url parameter
+- Key-value pairs sent in the url
+
+42. Middleware
+
+- Functions that have access to the req, res, next
+- Executed in the order they are defined before the route handler
+
+- Used for logging, authentication, parsing error, data handling ect.
+
+- next() - calls the next middleware in the stack
+
+Type of middleware
+
+Application level middleware
+- Bound to app using app.get() or app.use()
+
+Third party middleware
+- Installed  via npm
+- morgan, multer
+
+Route level middleware
+- Works like app level but bound to an instance of express.router()
+
+Built in middleware
+- Provided by express
+- express.json(), express.urlencoded(), express.static()
+
+Error handling middleware
+- Takes 4 arguments (err, req, res, next)
+
+43. Routing
+
+What is routing?
+- Defined how a application repsonds to client request for a specific endpoint and HTTP method
+
+express.router()
+- Mini express instance used to create modular route handlers
+
+44. Core express concepts
+
+Session
+- Used to store user info between requests
+
+Cookies
+- Used to store data in the client side
+
+
+
+
+------------------ EXTRAS ------------------
+
+
+
+1. Node module system
+- An existing block of code whose existence doesnt affect other codes
+- Container for classes, variables, objects
+
+Types of modules
+- Core modules
+- Local modules
+- Third party modules
+
+2. npx
+- Temporary runner for packages
+
+3. Buffer
+- Build in class used to handle binary data directly in memory
+
+4. Transfer Encoding:Chunks
+- HTTP header used when a server sends data in chunks rather than sending whole body at once
+
+5. OPTIONS
+- One of the standard http request methods
+- It asks the server what http headers and methods are allowed for this specific resource
+
+6. Clustering
+- Node js is single threaded
+- Cluster allows you to spawn multiple node js process with each sharing the same port
+- 1 parent process and multiple child process
+
+Use cases
+- Handle more conqurrent requests
+- Utilize all cpu cores
+- Auto restart if one worker crashes
+
+Multithreading 
+- Using worker threads to do heavy CPU-heavy tasks in parallel
+- require('worker_threads')
+
+7. Worker threads
+- Used for true multithreading in a single process
+
+Parent port - Used by the worker to 
+- Recieve messages from the main thread
+- Send responses back
+
+spawn vs fork
+
+Use case - Any OS command - Only nodejs modules
+Communication - stdin/stdout - IPC with .send() 
+Performance - Better for streaming - Best for JS tasks

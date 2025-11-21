@@ -1,0 +1,395 @@
+Second Domain - MongoDB
+
+1. Mongodb
+
+NoSql database that stores data in a document oriented format. Schema less, meaning each document can have a different structure.
+
+2. SQL vs NoSQL
+
+Tables and rows - Json like documents
+Fixed schema - Flexible schema
+Support Joins - No joins
+Vertical scaling - Horizontal
+
+4. Mongodb
+
+- A NoSQL database
+- Store data in BSON format
+- High availability and scalability
+
+5. Run on JS engine
+
+- Uses js for command execution
+- Use function, loops ect.
+
+6. Mongo Working
+
+- Store data in collection
+- Document in JSON like object
+- Values stored in BSON
+- Uses indexes for fast queries
+- Supports relication and sharding
+
+7. Non relational document based
+
+- Mongo doesnt use joins or tables
+- Document is self contained and stored in collections
+
+8. Advantages and disadvantages
+
+Advantages
+- Flexible schema
+- Easy horizontal scaling
+- High performance for read/write
+- Stores nested data
+
+Disadvantages
+- No joins
+- Limited Acid transactions
+- 16mb document limit
+
+9. BSON
+
+- Binary json
+- Binary encoded
+- Supports more data type
+
+10. Structure
+
+Database -> Collection -> Document
+
+11. Mongodb architecture
+
+12. JSON vs BSON
+
+Text - binary
+Slower speed - Faster for parsing
+Limited types - More types
+Smaller size - Larger due to meta
+
+13. MongoDB shell
+
+- Interactive command line interface to run queries, manage database ect.
+
+14. CRUD operations
+
+- Create
+- Read
+- Update
+- Delete
+
+15. Cursor
+
+- find() returns a cursor, not an array
+- It is iterable
+
+16. Time to live (TTL)
+
+- Type of index which expires after some time
+
+17. Maximum document size : 16mb
+
+18. Storage engine
+
+Mongo uses storage engines to check how data is stored in memory or on disk
+
+Types of storage engine
+
+WiredTiger
+- Default
+- Supports document level locking
+- Uses compression to reduce storage space
+- Good concurrency and performance
+
+In memory engine
+- Stores all data in ram
+- Testing and memory caching
+
+MMaPv1
+- Original engine
+- Memory mapped files
+
+GridFS
+- Used to store and retrieve files larger than 16 mb
+- Split large files into chunks and store them in two collections
+
+Journal
+- Provides write ahead loggin of data recovery in crashes
+- Durability and consistency
+
+19. Data types in MongoDB
+
+- ObjectID - Default id field in documents
+- String
+- Int - Whole numbers
+- Long - Int(64) - Large numbers
+- Double - Decimal numbers
+- Array, object
+- Boolean
+- Date
+- Decimal 128
+- Regex
+- Js - with scope - without scope
+- Minkey/Maxkey
+- Binary data
+
+20. Cursor
+
+Pointer to the result set of a query
+
+Methods
+- toArray()
+- forEach()
+
+21. Collection
+
+db
+- Represents the current database
+
+de.createCollection()
+- Creates a new collection manually
+
+showCollection()
+- List all collections
+
+22. Documents
+
+Documents are added by insertOne or insertMany
+
+Nested documents
+
+25. Additional methods for inserting
+
+- updateOne()
+- bulkWrite()
+- replaceOne()
+
+26. Finding/Querying
+
+Finding in nested fields and objects
+- $elemMatch
+
+Projection
+- Controls which field to return
+
+31. Upsert
+
+Updating if field available or inserting a new field if field not available
+
+32. BulkWrite
+
+Used to perform multiple operations in a single call
+
+ordered:false
+- Continue even if a error occurs while updating
+
+ordered:true
+- Default behaviour
+
+34. Aggregation
+
+Used to process data records and give computed results
+
+Working
+- Aggregation uses a pipeline approach
+- Data flows through multiple stages
+- Each stage transforms the data and passes to next
+
+Types of aggregation
+- Pipeline - Step by step aggregation
+- Map-reduce - Custom js functions for complex calculations
+- Single purpose aggregation - Simple commands for simple tasks
+
+$facet
+- Running multiple pipelines at once
+
+Aggregation pipeline
+- Process document through a sequence of stages. Each stage transforms the document and passes to the next stage
+
+Aggregation pipeline memory limit - 100mb
+
+Batch sizing 
+- Aggregation query returns large datasets, documents are returned in batches
+
+Map-reduce
+- Older way of performing aggregation like operations, especially for custom operations. Involves two functions
+- Map - Process and emits key value pairs
+- Reduce - Groups and summarizes values
+- Slower than aggregation
+
+35. Indexes
+
+Pros and Cons
+
+Prons 
+- Speed up read operation
+- Efficient searching
+- Covered queries
+
+Cons
+- Slows write operations
+- Additional disk space
+- Reduce overall performance
+
+Covered query
+- Where all fields in the query and projection are part of an index
+
+Types of index
+- Single field index
+- Compound index
+- Multikey index
+- Text index
+- Geospatial
+- Hashed
+- Clustered
+
+37. Relationships in Mongodb
+ 
+How documents are connected to each other
+
+Embedding
+- Include related data inside parent component
+
+Referencing
+- Storing the _id of the related document
+
+One-to-One
+
+One-to-Many
+
+One-to-Squillions
+
+Many-to-Many
+
+38. Replication
+
+Process of synchronizing data across mongodb servers so data doesnt get lost. Creating backup
+
+Replica set
+- Mongodb servers that maintain the same data. Includes
+	- Primary node - handles all write operations
+	- Secondary node - Replicate the data from primary
+
+Replication Architecture
+- Primary node - Main server for read/write
+- Secondary node - Copies the primary node
+- Arbiter - Doesnt hold data , but helps during election
+
+Election process
+- If primary node fails, secondaries hold an elction to choose new primary 
+- Node with the highest priority becomes primary
+- Arbitary helps in tie braking
+
+Heartbeat
+- Each node checks each other each 2 seconds and if not respond for 10 seconds it is considered dead
+
+Replication lag
+- Time delay between primary writing data and secondary receiving it
+
+Operation log
+- Each primary writes its changes to oplog, secondaries then copy this log and apply changes
+
+Types of replication
+- asynchronous - Default, secondaries can lag behind
+- Synchronous - Requires all secondaries to acknowledge the write
+- Majority commit - Ensures write is acknowledged by majority
+
+39. Sharding
+
+Mongo method for horizontal scaling - splitting large datasets across machines
+
+Sharding architecture
+ 
+mongos
+- Frontend router for queries
+
+Config Server
+- Store metadata and server info
+
+Types of sharding
+
+Hashed sharding
+- Hashes the shard key value
+- Distributes data evenly
+
+Ranged sharding
+- Divides data by ranges
+
+Zone sharding
+- Assign specific ranges of data to specific shards
+
+Shard key
+
+Shard hotspots
+- If shard key not distributed well, one shard gets overloaded
+
+Normal shard key
+- Chosen based on query patterns
+
+Hashed shard key
+- Avoid hotspots. Good default choice
+
+Scatter gather
+- When query does not include query key
+- Sent to all shards
+
+40. Cluster 
+
+Set of servers working togethet to maintain high availability, scalability and redundancy. Used for replication and sharding
+
+Types of clusters
+
+Replica set clusters
+- Set of servers that maintain the same data set
+- One primary node and multiple secondary node
+
+Sharded clusters
+- Used for horizontal scaling
+
+Config servers
+- Mongodb instances that store metadata about the cluster
+
+
+
+
+------------ EXTRAS ------------
+
+
+
+
+1. Expr
+- Used to write aggregate operations inside a find query
+
+2. Delete vs Remove
+
+Remove 
+- Legacy method
+- Used in older versions of mongodb and drivers
+
+Delete
+- Introduced in newer mongodb  and shell versions
+- More explicit and clear
+
+3. replaceOne()
+- Used for replacing an entire document with the one that matches the query
+
+4. Utility commands
+- Commands that help you interact with the mongodb server, database rather than manupulate actual data
+
+5. Indexing options
+- Background:true - Creates an index in the baclground so it doesnt lock the database
+- unique:true - Ensure all values in the indexed field are unique
+- name:<index_name> - Assigns a custom name to the index
+
+6. reIndex()
+- Rebuilds all indexes in the collection
+
+Useful if
+- Indexes are corrupted
+- Done heavy updates
+- Performance drops	
+
+7. Hiding index
+
+- hideIndex() - Temporarily disables a index
+- unhideIndex() - Enables a index 	

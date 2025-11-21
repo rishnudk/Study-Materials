@@ -1,0 +1,699 @@
+Second Domain Week
+
+JavaScript
+
+1. What is JS?
+
+- High level, interpreted programming language used to create interactive and dynamic content on websites
+- Client side language
+- Interpreted language
+- Lightweight and flexible
+- Event-driven and asynchronous
+- Object oriented and functional
+
+2. How javascript runs
+
+- Javascript engine - V8, Spidermonkey, Javascript core
+- What the engine does
+	- Parses the code
+	- Compiles it to machine code using JIT compilation
+	- Executes the code
+- Javascript in the browser - like V8 in the chrome
+- Web apis - not part of JS engine, but provided by the browser - DOM, setTimeout, fetch, console ect.
+
+3. Variable
+
+- Labelled box where you store some value
+- 3 ways to create variable - var, let, const
+	- var - function scope
+	- let - block scope
+	- const - block scope
+
+4. Data types
+
+Primitive data types
+- Basic, immutable data types
+- String, number, boolean, undefined, null, bigint
+
+Non-primitive data types
+- Store multiple values and are mutable
+- Object, array, function
+
+typeof Operator
+- To check the type of variable
+
+5. Type conversion vs Type coercion
+
+Where values change from one datatype to another, either manually or automatically
+
+Type conversion
+- Explicitily converting using functions
+- Explicit conversion - toString, parseInt, Number, Boolean
+
+Type coercion
+- JS automatically converts
+- Implicit type conversion
+
+6. Operators
+
+Arithmetic operators
+- Used for basic math
+- Addition, subtraction, multiplication, Division ect.
+
+Assignment operator
+- Used to assign values
+- Assign, +=, -+ ect.
+
+Comparison operator
+- Used to compare values
+- ==, ===, !=, >, < ect.
+
+Logical operator
+- Used for logical operations
+- &&, !
+
+String operator
+- Used to concate strings
+- +
+
+Ternery operator
+- Compact way of writing if else
+- ? :
+
+Type operator
+- Used to check the type of
+- typeof, instanceof
+
+7. Conditional statements
+
+if statement
+- Executes a block if the condition is true
+
+if-else statement
+- It true do this else do this
+
+if-else if-else statement
+- Use when multiple cases
+
+switch statement
+- Checking one variable against many values
+
+8. Loops
+
+for loop
+- When you know how many times to loop
+
+while loop
+- runs when a condition is true
+
+do-while loop
+- Run atleast one even if the condition is false
+
+for-of loop
+- used for arrays, strings ect
+
+for-in loop
+- used in objects
+
+9. Functions
+
+Function declaration
+
+Function with parameters
+
+Function with return value
+
+Function expression
+- Function stored in variables
+
+Arrow function
+- Short way of writing functions
+
+Default parameters
+
+Rest parameters
+- Used to accept multiple arguments as an array
+
+Callback functions
+- Passing an function as an argument to another function
+
+Immediately invoked function expression (IIFE)
+- Function calls itself when declared
+
+10. Arrays
+
+Array methods
+- push() - Insert an element at the end
+- pop() - Remove the last element
+- unshift() - Adds at start
+- shift() - Removes the first element
+- includes() - Check existence
+- indexOf() - find index
+- join() - Convert array to string by adding an element between
+- slice() - copy a portion
+- splice() - Add/Remove/Replace
+- reverse() - Reverse the array
+- sort() - Sort the elements in a order
+- forEach() - loops through item
+- map() - Returns a new array after iterating through the existing array
+- filter() - Returns items that matches a condition
+- find() - Get the first matching value
+- findIndex() - Get the index of first matching value
+- reduce() - Combine all values to one
+- every() - Check if all items match condition
+- some() - Check if any item matched condition
+- fill() - Fill array with value
+- flat() - Flatten nested array
+
+11. Objects
+
+An object is a collection of key-value pairs
+
+Nested objects
+- Object inside objects
+
+Accessing and modifying objects
+- Dot notation
+- Bracket notation
+
+Methods
+- Object.keys(obj) - Gives array of keys
+- Object.values(obj) - Gives values of obj
+- Object.entries(obj) - Array of [key, value] pairs
+
+12. ES6 features
+
+let and const
+
+Arrow functions
+
+Template literals
+
+Destructuring
+
+Default parameters
+
+Rest parameters
+
+Spread operator
+
+Modules
+
+Classes
+
+for-of loop
+
+Map and Set
+
+Promises
+
+Symbol
+
+Block scoping with let and const
+
+13. DOM Manipulation
+
+DOM is the structure of your html page represented in javascript as tree of objects
+
+Accessing Dom elements
+- getElementById
+- getElementsByClassName
+- getElementsByTagName
+- querySelector
+- querySelectorAll
+
+Changing content
+- innerText
+- innerHTML
+
+Changing styles
+- style.color
+
+Adding and removing class
+- classlist.add
+- classlist.remove
+
+Creating a new element	
+- document.createElement
+
+Remove elements
+- element.remove()
+
+Event and eventListners
+- .addEventListner
+
+Event delegation
+- Adding a single event listner to parent object instead of attaching to child elements
+
+Event object
+- When an event happens, an event object is automatically passed to your handler. It contains info like what was clicked, mouse/key data, preventing default behaviour
+
+14. Date methods
+
+Buid in method
+- Date.now()
+
+15. Error handling
+
+What is error handling
+- How javascript catches runtime errors without crashing the application
+- Using try..catch block
+
+Finally block
+- Always runs, whether error or not
+
+Throwing custom errors
+- You can throw custom errors using throw
+
+16. Set and Map
+
+Set 
+- A collection of unique values
+- Methods
+	- add(value)
+	- delete(value)
+	- has(value)
+	- clear()
+	- size
+
+Looping through set
+- for(let item of set)
+
+Map
+- Collection of key-value pairs where keys can be of any type
+- Methods
+	- set(key, value)
+	- get(key)
+	- has(key)
+	- delete(key)
+	- clear()
+	- size
+
+17. JSON
+
+JSON stands for Javascript object notation, lightweight format for storing and transfering data, mostly used in web APIs and web apps
+
+JSON.stringify()
+- Converts JS objects to strings
+
+JSON.parse()
+- Converts JSON string to js objects
+
+18. Hoisting
+
+Javascript behaviour of moving declared functions, variables to the top during their compilation phase
+
+2 phases in javasript
+- Memory allocation phase
+- Execution phase
+
+Let and Const get hoisted
+- Gets stored in the memory during memory allocation phase but doest get initialized
+
+Var gets hoisted
+- Allocates in the memory and initializes with the value undefined
+
+Temporal dead zone
+- The space between hoisting and the actual line of declaration of the code. Let and Const will get refernce error while var becomes undefined
+
+19. Closure
+
+A function remebers the variable from outer scope even if the function has stopper working
+
+20. Scope
+
+Global Scope
+- Variables declared outside the function
+- Accessible anywhere
+
+Functional scope
+- Variables declared inside a function
+- Only accessible to that function
+
+Block Scope
+- let and const
+- Only available inside the {} declared
+
+Scope chain
+- When trying to access a variable JS looks into
+- Current scope
+- outer scope
+- global scope
+
+21. Execution context
+
+Environment where js code is evaluated and executed. Every time a code is invoked, a new execution context is created
+
+Types
+- Global execution context
+- Function execution context
+- Eval execution context
+
+Phases of context
+- Creation phase
+	- Memory allocated
+	- var hoisted alloted to undefined
+	- let and const hoisted in the tdz
+	- functions are hoisted fully
+- Execution phase
+	- Code is executed line by line
+	- Variables are assigned values
+	- functions are invoked
+
+22. Call stack
+
+JS is single threaded so it uses call stack to manage execution
+
+When call stack is empty, program ends
+
+Stack overflow
+- When you have nested calls without termination
+
+23. Single and multi
+
+Single threaded
+- One line runs at a time in a single main thread
+
+Multi threaded
+- Run multiple tasks simultaneously on multiple threads
+
+24. this keyword
+
+this refers to the object that is executing the current function
+
+Different scenarois
+- Global context - window object(in browsers) - global object(in node.js)
+- Function - global object
+- Inside a method - The parent object
+- Arrow functions - Dont have their own this. They take this from the lexical scope
+- Constructor function - this refers to newly created object
+- Event listners - this refers to the element that trigerred the listner
+
+25. Prototype 
+
+In js every object has a internal link to another object called prototype. 
+
+When you try to access the property on an object, JS checks the object itself, and if not found check its prototype and then prototype's prototype and continues
+
+26. Class and OOPS in js
+
+OOP is a programming style based on the concept of objects - like blueprint that produce real items
+
+Class and contructor
+- Class - defines the blueprint
+- constructor - initialize properties
+
+Super keyword
+- Used to call the method or constructor of the parent class
+
+Encapsulation
+- Making methods or values private, protected or public
+
+Polymorphism
+
+27. Callback
+
+Function passed as an argument to another function to handle async results
+
+Callback hell
+- Calling nested function inside a single function
+
+Promise
+- Object that represents a value that is available in the future
+
+Promise chanining
+- Chaining promises using then and catch
+
+Async/Await
+- Syntax sugar for promise
+
+28. Asynchronous javascript
+
+JS is single threaded, but works asynchronously using event loop
+
+setTimeout and setInterval
+- Doesnt block the code, runs in the background
+
+Callbacks
+
+Promises
+- Promise.resolve - returns a resolved value
+- Promise.reject - returns a rejected promise
+- Promise.all - wait for all promises to resolve, if any fails it rejects
+- Promise.allSettled - wait for all promises to finish. Never rejects	
+- Promise.race - Returns the first settled promise
+- Promise.any - Returns tha first fullfilled promise. If all rejects, throws an aggregate error
+
+29. Ajax and Fetch
+
+AJAX - Asynchronous javascript and xml
+- Technique not a language
+- Used to read and write without refreshing the page
+
+Old way - using XMLHttpRequest
+
+Fetch api
+- Modern replacement for XMLHttpRequest
+- Promise based
+
+30. Storage
+
+Local Storage
+- Store in browser
+- No expiration
+- Data is per origin
+- Accessible via local storage
+
+Session storage
+- Data last only till the browser closes
+
+Cookie Storage
+- Store small amount of data (<4kb)
+- Can set an expiry date
+- Automatically sent to server with each request
+
+31. Debouncing and Throttling
+
+Debouncing
+- Waits for user to stop executing a function
+- Only runs a function after a delay and if no event is trigerred in between
+
+Throttling
+- Funcitons works at least x times in a specific time interval unless how many times trigerred
+
+32. Memory allocation
+
+How js allocates and frees memory when things are created
+
+Memory allocation has 2 phases
+- Allocation phase
+	- When objects, variables ect are created
+- Deallocation
+	- When data is no longer needed, reclaims the memory
+
+33. Garbage collection
+
+How javascript manages memory. Automated process of javascript of removing unwanted objects not in use(unreachable)
+
+Reachability
+- If an object is reachable, its in use. If not, its garbage
+
+Reachable means
+- Its in the call stack
+- Reffered from the global variable
+- Reffered from another reachable object
+
+Mark and Sweep algorithm
+- Mark phase - Start from the root and mark all the objects which can be reached and mark it
+- Sweep phase - Remove all the unmarked objects
+
+Memory leak
+- When an app retains memory but dont need it. Still holds references, gargabe collector cant remove it
+
+Causes
+- Global variables
+- Uncleared timer and intervals
+- Detached dom elements
+- Closures holding large data
+
+Detecting memory leaks
+- Devtools -> Memory tab
+- Take a heap snapshot
+
+34. Regular expression
+
+A regex is sequence of characters that form a search pattern
+
+35. Currying
+
+Process of converting a function that takes multiple arguments into a sequence of functions where each take one argument
+
+36. Event bubbling and Capturing
+
+The event follows a three phase journey
+- Capturing phase - Event travels from the window to the target element
+- Target phase - Event reaches the target element
+- Bubbling phase - Event bubbles back from the target element to the window
+
+
+
+--------------- EXTRAS ----------------
+
+
+
+1. Order of parsing
+- How js reads your code from top to bottom before running it. There are two phases for this
+
+Parsing phase
+- JS reads you code
+- Allocates memory for variables and funcitons
+- Process function declaration and variable declaration
+- Hoisting happens
+
+Execution phase
+- Executes code line by line
+- Variables assigned, functions called
+
+2. Proxy
+- Lets you intercept and redefine operations on a object like property access, assignment, deletion ect
+- It acts like a middleman
+
+3. Mutation observer
+- Browser API that checks for changes in the dom, like
+- New elements added
+- Text updated
+- Attributes chaged
+- Elements removed
+- When such changes happen, a callback function is triggered
+
+4. Starvation
+- When microtask gets accumulated in the microtask queue, task queue or callback queue doesnt get a chance to run. 
+- This is called starvation
+
+5. JIT compilation
+- Makes your code run faster
+- Interprets each line of you code
+- Frequently used code is turned into machine code
+- JS is both interpreted and compiled
+
+Phases of JIT
+- Parsing - Code -> Abstract syntax tree
+- Interpreter - Convert AST -> bytecode
+- Profiler - Watched which code runs frequently
+- Compiler - Optimized hot code to machine code
+
+Abstract syntax tree
+- Tree like structure of the source code that is easier for js to understand and manipulate
+
+Helps in 
+- Code optimization
+- Syntax checking
+- Transpilation	
+
+6. Higher order functions
+- Either takes a function as a argument
+- Or returns a function
+- Or both
+
+7. Decorator function
+- Wrapper around another function which enhances the functionalities of the inner function
+
+8. WeakSet
+- Similar to set
+- Stores only objects
+- Weakly stored, doesnt prevent garbage collection
+- Not iterable
+
+9. WeakMap
+- Keys must be objects
+- Cant iterate
+- Held weakly
+
+10. Flatmap
+- Performs .map along with .flat(1) in one step
+
+11. copyWithin
+- Copies part of the array to another location in the same array, replacing values
+
+12. Unary operator
+- Operators which work only on one operand 
+- Unary operator takes one value and performs actions on it
+
+13. Shadowing
+- Variable declared in the inner scope has the same name as one declared in the outer scope
+- The inner variable shadows the outer one
+
+14. Illegal shadowing
+- Happens when you declare let or const in a scope where var is already declared
+
+15. Call, Apply, Bind
+- These are used to explicitly set the this value of a function
+
+call()
+- Calls a function immediately with a given this and arguments passed one by one
+
+apply()
+- Same as call, arguments are passed in a array
+
+bind()
+- Returns a new function with the this context as that of the object. Can call it later
+
+16. Polyfill
+- Piece of code that new feature on older browser that doesnt support it
+
+Transpiler
+- Converts modern js syntax to older syntax
+
+17. Symbols
+- Unique and primitive immutable values
+- Created with symbol()
+- Not same even with same values
+
+Uses
+- To create unique keys that dont clash with other keys
+
+18. Thenable
+- An object with then that acts like a promise
+
+Promise is immutable
+- If a promise is settled, it cannot be changed
+
+19. Prototype
+
+Prototype chain
+- JS object has a hidden property called prototype 
+- This points to another object called called its prototype
+- When you access a property on an object, js looks in the object
+- If not found, js starts looking in the related prototypes
+
+Prototypal inheritance
+- Object inherit methods from their prototype
+
+Uses
+- Share methods 
+- Avoid duplication
+- Enable code reuse 
+
+20. Deep and Shallow copy
+
+Shallow Copy
+- Copies only the top level 
+- If property is a primitive, it value is copied
+- If property is an object or array, its reference is copied
+- Nested objects or array are shared between the copy and original
+
+Deep Copy
+- Copies all levels of object or array recursively
+- Nested objects or arrays are brand new, no references shared
+- Changes in the copy do not affect original
+
+21. Constructor function
+
+Special type of function used to create and initialize objects
+- Starts with a capital letter
+- Called using the new keyword
+
+22. Web workers
+- Special way to run js in the background
+- Seperate from the main browser UI
+- Keeps the UI responsive while performing heavy tasks like

@@ -1,0 +1,229 @@
+DSA WEEK 2
+
+Sorting Methods
+
+1. Bubble sort
+- Repeatedly compares adjacent elements and swaps them if they are in wrong order.
+- The largest element bubbles up to the end in each pass
+- Simple but least efficient for large datasets
+Time complexity:
+- Best case (Already sorted) - O(n)
+- Average case - O(n^2)
+- Worst case (Reversed order) - O(n^2)
+- Space complexity - O(1)
+
+2. Insertion sort
+- Assume first element is already sorted
+- Pick the next element and insert it into its correct position in the sorted part
+- Shift element if needed to make space for the new element
+- Repeat for all elements until array is sorted
+Time complexity:
+- Best case (Already sorted) - O(n)
+- Worst case (Reverse order) - O(n^2)
+- Average case - O(n^2)
+
+3. Quick sort
+i) Divide and conquer
+- Divide: Pick a pivot and partition the array into two parts
+- Conquer: Recursively apply quick sort to both partitions
+- Combine: Since sorting happens in once no merging step is needed
+ii) Partition method
+- This methods ensures that elements are rearranged around the pivot
+- Choose a pivot 
+- Move elements smaller than the pivot to the left
+- Move elements larger to the right
+- Return the pivots correct position in the sorted array
+iii) Pivot Selection
+- Affects quick sort efficiency
+- Last element - Simple but lead to worst case performance
+- First element - Same as last element
+- Random element - Reduce the chance of worst case
+- Median of three - Reduce worst case risk
+iv) Pivot selection strategies - Last & First
+- Select the last element as the pivot
+- Select the first element as pivot
+v) Average/Median Pivot selection
+- Best case - O(n log n)
+- Worst case - O(n^2)
+- Average case - O(n log n)
+
+4. Merge Sort
+- Divide and conquer algorithm that works by splitting the array into smaller parts, sorting them and merging them back together.
+- Divide the array into two parts until each part has only one element
+- Sort and merge the smaller parts together
+- Continue merging until entire array is sorted
+Time complexity:
+- Best case - O(n log n)
+- Average case - O(n log n)
+- Worst case - O(n log n)
+
+5. Stack
+A stack is a last-in-first-out data structure meaning the last element to be added is the first one to be removed.
+i) Key Operations:
+- Push - Add to the top of the stack
+- Pop - Remove the top item
+- Peek - See the top item without removing it
+- isEmpty - Check if the stack is empty
+- Size - Check the number of elements in the stack
+ii) Stack Underflow(Empty stack):
+- Happens when you try to pop from an empty stack
+iii) Stack Overflow(Full Stack):
+- Happens when a fixed size stack exceeds its limit
+iv) Use cases of stack:
+- Undo/Redo in text editors
+- Backtracking
+- Expression evaluation
+- Funtion calls
+- Browser history
+v) Types of stack:
+- Linear stack
+. A simple stack with fixed size
+. Has stack overflow when full
+. Used when size is known beforehand
+- Dynamic stack
+. Resizes automatically
+. No stack overflow as memory grows dynamically
+. Used when size is unknown
+vi) Stack implementations
+- Array based stack
+. Uses an array to store elements
+. Fixed size
+. Fast operations for push/pop
+- Linked list based stack
+. Uses a linked list instead of an array
+. Dynamic size
+. Takes extra memory for pointers
+vii) Monotonic stack
+- A specialized stack where elements are always in increasing or decreasing order
+viii) Ways to implement a stack
+- Array based implementation
+- Linked list based implementation
+
+6. Queue
+A queue is a first in first out data structure meaning the first element added is the first element to be removed
+- Enqueue - Insert at the end of the queue
+- Dequeue - Remove the front element
+- Peek - View the front element
+Types of Queue:
+- Linear queue - Simple FIFO operation
+- Circular queue - Prevents wasted space, wraps around
+- Priority queue - Removes elements based on priority
+- Deque - Allows insert/remove from both ends
+- Blocking queue - Blocks operations if fail/empty
+- Concurrent queue - Supports multiple threads safetly
+- Delay queue - Process elements after delay
+
+7. Hash Table
+A hash table is a data structure that stores key value pairs and allows fast searching in O(1) time (on average).
+- Searching in O(1) time - Has table achieves O(1) time complexity for searching, inserting and deleting elements in a has function
+- Hash functions - A hash function converts a key into a index in the hash table
+- Collision - Sometimes 2 different keys map to the same index which is called a collision
+Ways to handle collision - Chaining (Using linked list at each index) - Open addressing - Finding another free slot nearby
+- Dynamic restructuring - If the hash gets too full, we increase its hash and resize all the elements
+Uses of hash table:
+- Databases - Used for indexing data
+- Caching - Used in web browsers for caching recent data
+- Symbol data - Used in web browsers for variable/function lookups
+- Cryptography - Used in hasing password
+Load Factor - Load Factor=Number of elements/Total size of hash table
+- If load factor is too high - More collisions - Slower performance
+- If load factor is too low - Wasted space
+Operations:
+- Init (Initializing a hash table)
+- Insert (Insert a key and value)
+- Search (Find a element with its key)
+- Delete (Remove a element with its key)
+- Traverse (Print all alements)
+
+8. WeakSet & WeakMap
+These are special types of set and map in javascript, optimized for memory management
+WeakSet:
+- Similar to set, only stores objects
+- Cannot be iterated
+WeakMap:
+- Similar to map, the keys must be objects
+- No iteration methods
+
+9. Collision handling
+Collision handling occurs when 2 different keys get hashed into the same index in the table
+How do we handle collisions:
+- Seperate chaining - Each index stores a list of key value pairs - If multiple keys hash to the same index, we store them as a list
+
+10. Open addressing in hash tables
+Open addressing is a collision handling technique where we store all the elements in the hash table itself. If a collision occurs we find another empty slot using different probing methods.
+Open addressing basics:
+- No extra linked list or external storage
+- If a key collides, we search for an empty slot inside the hash table itself
+- Three main methods 
+. Linear Probing
+. Quadratic Probing
+. Double Hashing
+
+a) Linear Probing
+If a collision occurs, we check the next available slot (increment by 1). If index is occupied, check index+1, index+2 until an empty slot is found.
+new_index = (old_index + 1) % table_size
+b) Quadratic Probing
+Instead of jumbing next slot, we jump quadratically
+new_index = (old_index + i²) % table_size
+c) Double Hashing
+If a collision occurs, we use another hash function to find the next slot
+new_index = (hash1(key) + i * hash2(key)) % table_size
+
+11) Clustering
+Clustering happens when multiple elements group together, making searching slower.
+- Primary Clustering (Linear Probing) - iF consecutive slots are filled, future insertions take longer
+- Secondary Clustering (Quadratic & Double hashing) - New positions depend on the original hash index, reducing clustering but not eliminating it.
+
+12) Cuckoo Hashing
+It is a collision resolving technique where we use two or more hash functions and use two or more hash tables. If a collision occurs, it moves the old element to its alternative element.
+- Compute two hash functions h1(key) and h2(key) which give two possible outputs
+- If first position is empty, insert the element there
+- If already occupied, evict the old element and place the new one
+- The evicted element gets moved to its alternate position
+ 
+13) RobinHood Hashing
+It is an open addressing collision resolution technique that balances the search time for all elements. It steals from the rich to help the poor.
+- Compare the hash index of an element
+- If the slot is empty insert it there
+- If collision occurs compare prob distance
+- If new element has travelled more, swap it with the current element
+- Repeat until the element is inserted 
+
+14) SHA:Secure hashing algorithm
+SHA is a family of cryptographic hash functions designed by NSA (National security agency) and published by NIST (National institute of Standards and technology). It is used for data integrity, digital signatures and password hashing.
+- A hash function is a mathematical function that takes a input and produces a fixed size output.
+
+15) Applications
+🔹 Bubble Sort
+- Simple cases where ease of implementation is more important than efficiency
+- Teaching sorting concepts in basic programming
+- Detecting small errors in nearly sorted datasets
+🔹 Insertion Sort
+- Small datasets where simplicity and stability are needed
+- Sorting playing cards in games
+- Online sorting (real-time insertion of elements)
+🔹 Selection Sort
+- Suitable for small arrays with minimal memory usage
+- Used in cases where swaps are costly (e.g., flash memory sorting)
+- Teaching sorting basics due to simplicity
+🔹 Quick Sort
+- Large datasets due to its fast average-case performance
+- Used in database sorting, search algorithms, and programming libraries
+- Optimized sorting in competitive programming
+🔹 Merge Sort
+- Sorting linked lists efficiently
+- External sorting (handling large files on disk)
+- Used in stable sorting applications (e.g., maintaining original order of equal elements)
+- Data Structures
+🔹 Stack
+- Function calls (managing recursion)
+- Undo/Redo functionality in text editors
+- Backtracking algorithms (e.g., maze solving)
+🔹 Queue
+- Task scheduling (CPU scheduling, printer queues)
+- Real-time processing (handling requests in servers)
+- Breadth-First Search (BFS) in graphs
+🔹 Hash Table
+- Fast lookup operations (dictionaries, caching, indexing)
+- Implementing databases and search engines
+- Removing duplicates in datasets efficiently

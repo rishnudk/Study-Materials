@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="box">
+</div>
+<style>
+    #box {
+height : 200px;
+width : 200px;
+/* background-color: rgb(19, 105, 60); */
+    }
+</style>
+<input type="checkbox" id="myCheckbox"> CheckBox <br>
+<button type="button" id="myButton"> click here</button>
+<script>
+    const checkbox = document.getElementById('myCheckbox')
+    const button = document.getElementById("myButton")
+    const box = document.getElementById('box')
+
+    button.addEventListener('click', () => {
+        checkbox.checked = !checkbox.checked
+
+        if(checkbox.checked){
+            box.style.backgroundColor = 'red'
+
+        } else {
+            box.style.backgroundColor = 'yellow'
+        }
+    })
+</script>
+
+
+</body>
+</html>

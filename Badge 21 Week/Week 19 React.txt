@@ -1,0 +1,224 @@
+Week 19 React
+
+1. Render Props
+A render prop is a technique where a component accepts a function as a prop and calls that function to render UI
+
+2. Higher order component
+A higher order component is a function that accepts a component and returns a new component with added functionality
+
+3. Custom Hooks
+A custom hook is a JavaScript function that starts with use and allows you to extract and reuse react hook logic
+
+Why use custom hooks
+- Reuse logic across component
+- Keep components clean
+- Dont repeat yourself
+
+4. Code splitting
+Code splitting means splitting the code into different bundles to load only the code which is required, instead of loading everything upfront. Helps speed up the initial load time and improve user experience
+
+- Route based code splitting
+Split the bundle per route, so each page loads only per route
+
+- Component based code splitting
+Use react.lazy() for any component, not just routes. Ideal for big and rarely used UI blocks
+
+- React.lazy() + Suspense
+. React.lazy() tells us how to import the component
+. Suspanse wrapper shows us the fallback UI while loading
+
+5. Lazy Loading
+Delaying the loading of a component until its needed. Helps reduce the initial load time
+
+- Fallback UI
+. Temporary UI shown while loading the component. 
+. Fallback can be a spinner, loading, skeleton screen
+. Required when using react.lazy()
+
+- Suspense
+. Built in component from react
+. Used to wrap lazy loaded components and show fallback UI
+
+- Error boundaries
+Catch JS errors in the component tree, logs them, and display a custom fallback UI instead of crashing
+
+- componentDidCatch 
+. lifecycle method used in error boundaries
+. Use this in class components to log the error or do fallback behaviour
+
+- Nested lazy components
+. You can nest multiple lazy components each with its own suspense
+
+6. useReducer
+A react hook used for complex state logic, alternative to useState
+- state - current value state
+- dispatch - function to send action to the reducer	
+- reducer - function that takes state, action and returns a new state
+- initial state - starting value for state
+
+Dispatch
+- dispatch sents an action object to the reducer
+- The action must have a type field
+
+useReducer VS useState
+
+useState
+- Simple state
+- [value, setValue]
+- Inlined in component
+- Form input, toggles, counters
+
+useReducer
+- Complex logic with multiple sub values
+- [state, dispatch]
+- Moved to reducer function
+- Forms, todoList, nested state objects
+
+Payload
+- payload is an extra data sent with the action
+
+7. Proptypes
+A build in way to define and check the type of props that you component expects
+
+Types
+Can validate different types of props
+- PropTypes.string
+- PropTypes.number
+- PropTypes.bool
+- PropTypes.func
+- PropTypes.array
+- PropTypes.object
+- PropTypes.any
+
+Required vs Optional
+
+oneOf, shape, arratOf, objectOf 
+- oneOf - Like enums
+- shape - For validating objects
+- arrayOf - Validating array of specific type
+- objectOf - Object with specific values
+
+PropType VS Typescript
+
+PropType
+- Validation type - Runtime
+- Setup - Import
+- Features - Type checking
+- Error - In browser console
+- Usage - Good for small/medium apps
+
+Typescript
+- Validation type - Static (Compile time)
+- Setup - Compiler setup
+- Feature - JS Feat
+- Error - In code editor
+- Usage - Large scale, produciton apps
+
+8. useMemo VS useCallback
+Both are react hooks for memoization. Help prevent unnecessary re-renders and recalculations
+
+useMemo
+- Caches a value
+- Re-runs only when dependencies changes
+- Prevents recalculating expensive computations
+
+useCallback
+- Caches a function
+- Useful when passing callbacks to child components that use React.memo
+
+React.memo VS useMemo
+
+React.memo
+- Type - Higher order component
+- Memoizes - Whole component output
+- Use case - Prevent unnecessary rerender
+- Syntax - React.memo(Component)
+
+useMemo
+- Type - React hook
+- Memoizes - Value inside component
+- Use case - Prevent unnecessary calculation
+
+Pros and Cons of memoization
+
+Pros
+- Boost performance for expensive calculation
+- Prevent unnecessary rerender of components
+- Helpful in large lists, filtered views or UI heavy trees
+
+Cons
+- Overuse makes code hard to read and debug
+- Memory overhead
+- Only helpful when there is real bottleneck
+
+9. Context API
+
+Why use it?
+- Avoid prop drilling (passing props throught many nested components)
+- Store global state at top level
+- Works with extra libraries
+Key parts
+- Provider - Stores the data and provides it to components
+- Consumer - Reads the context
+- useContext - Modern way to access context inside functional components
+- useReducer - Combine with context for global state management
+
+Context Provider
+- A provider is a wrapper that holds shared state
+
+Context Consumer (Old method)
+- Before useContext we used consumer to access context
+
+useContext
+- Simplest way to consume context inside a function component
+
+useReducer with Context API
+
+10. Webpack
+Webpack is a module bundler for JS. It takes your js, css, images ect. and bundles them into files browsers can understand typically into one or more files
+
+Module Bundler
+- Takes all your modules
+- Build a dependency graph
+- Bundles into one or more files for production
+
+Code Splitting
+- Helps break your code into smaller chunks to use only when needed
+
+Webpack development server
+- Starts a local development server
+- Automatically rebuilds and refreshes your app on changes
+
+Hot module replacement
+- Update only the changed module, not the full page
+- Updates the changed code
+- Keep your component states intact
+
+Tree shaking
+- Webpack removes dead code - anything we dont use gets left out in the final bundle
+
+11. Babel 
+
+Transpilation
+- Babel translates ES6 JS into ES5 JS that older browsers can also understand
+
+Plugins
+Bable plugins add functionality like
+- Transforming JSX
+- Optional Chaining Support
+- Class properties support
+
+Runtime polyfills
+- Babels can add polyfills so that older browsers can support
+
+Dynamic import
+- Babel allows import to dynamically import a module
+
+12. useDefferedValue
+- Used to defer updating a value to avoid blocking the UI
+
+13. Dead code elimination
+- Weback and Babel can identify code that is never used and remove it during bundling
+
+14. useTransition
+- Used for non urgentUI while keeping other parts responsive

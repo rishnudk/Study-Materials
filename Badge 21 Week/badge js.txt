@@ -1,0 +1,372 @@
+- [x]  Keywords
+- [x]  Identifiers
+- [x]  Var, Let, Const
+- [x]  Strict Mode in JS
+- [x]  Dynamic Typing
+- [x]  Boxing
+- [x]  Array’s Superclass
+- [x]  BOM (Browser Object Model)
+- [x]  Browser Web APIs
+- [x]  Variable Shadowing
+- [x]  Polymorphism (OOP Concepts)
+- [x]  ReferenceError
+- [x]  Improper Use of Function Parameters
+- [x]  Nullish Operator (`??`)
+- [ ]  Bitwise Operators
+- [x]  Falsy Values
+- [x]  `console.log(1 + '1')` (Type Coercion)
+- [x]  `console.log('A' - 1)` (Type Coercion)
+- [x]  `console.log(1 + +'1')` (Type Coercion)
+- [x]  `instanceof` (Checking Error Types)
+- [x]  `new` Keyword (Explanation)
+- [ ]  Short Circuit Evaluation
+- [x]  `extends` Keyword
+- [x]  `for...in` Statement vs `for...of` Expression
+- [x]  `Set` vs `Map`
+- [x]  `Object.freeze`
+- [x]  `Object.seal`
+- [x]  `Object.is` (Immutability)
+- [x]  `Object.entries`
+- [x]  `Object.keys`
+- [x]  `Object.values`
+- [x]  `Object.prototype`
+- [x]  `Array.from()` vs `Array.some()`
+- [x]  `Array.prototype`
+- [x]  `appendChild`
+- [x]  `removeChild`
+- [x]  `event.preventDefault`
+- [x]  Are `null` and `undefined` Objects?
+
+---
+
+### **Functions**
+
+- [x]  Arrow Functions
+    - [x]  Modify Arrow Function to Accept Any Number of Arguments
+- [x]  Higher-Order Functions (HOF)
+- [x]  Pure Functions
+- [x]  IIFE (Immediately Invoked Function Expression)
+- [x]  Callback Functions
+- [x]  Callback Hell
+- [x]  Currying
+- [x]  Factory Functions
+- [x]  Generator Functions
+    - [x]  Extracting Yields from Generator Function
+- [x]  Function Methods
+    - [x]  Call
+    - [x]  Apply
+    - [x]  Bind
+- [x]  Async Functions
+    - [x]  Calling Async Functions
+    - [x]  `async-await`
+    - [x]  `await` Keyword
+- [x]  Promises
+    - [x]  Promise States
+    - [x]  `Promise.all()`
+    - [x]  Promise Methods
+    - [x]  Promise Combinations
+    - [x]  Promise with Timer Function
+- [x]  Memoization
+- [ ]  Polyfills
+
+---
+
+### **Objects**
+
+- [x]  Object Methods
+    - [x]  `Object.keys`, `Object.values`, `Object.entries`
+- [x]  Object Literals
+- [x]  Object Destructuring
+- [x]  Object Manipulation
+    - [x]  Rename Field in an Object
+    - [x]  Remove Key Corresponding to the Lowest Value in an Object
+    - [x]  Find Key Corresponding to Highest Value in an Object
+    - [x]  Remove Last Property from Object
+    - [x]  Remove Object Keys Starting with "l"
+    - [x]  Remove Object Keys Corresponding to Odd Values
+    - [x]  Check if an Object is Empty
+- [x]  Pass by Value vs Pass by Reference
+- [x]  Deep Copy
+    - [x]  Create a Deep Copy of an Object
+- [x]  Shallow Copy
+- [x]  Prototype
+- [x]  Prototypal Inheritance
+- [x]  Proxy Object
+- [ ]  WeakMap
+- [ ]  WeakSet
+- [ ]  Object.defineProperty
+- Object.defineProperties
+
+---
+
+### **Arrays**
+
+- [x]  Array Methods
+    - [x]  Reduce
+    - [x]  FlatMap
+    - [x]  Filter
+    - [x]  Find Frequency of Elements in an Array
+    - [x]  Remove Duplicates from Array (Filter, Set)
+    - [x]  Find the Largest in an Array Using `reduce`
+    - [x]  Slice Array into Two Equal Halves (Throw Error if Odd Count)
+    - [x]  Non-Repeating Elements in an Array
+    - [x]  Reverse an Array Without Using `.reverse()`
+    - [x]  Find the Sum of Elements in a Given Array
+    - [x]  Find the Average Price by Category
+    - [x]  Remove Duplicates from an Array
+    - [x]  Filter Strings from Array
+    - [x]  Largest String in Array
+    - [x]  Remove Duplicate Even Numbers from Array
+    - [x]  Total Number of Vowels in an Array
+    - [x]  Sum of Positive Numbers in Mixed Array
+    - [x]  Largest Odd Element from Array
+    - [x]  Filter Numbers from Array
+
+- [x]  Swap First & Last Character of String
+
+- [x]  Array Destructuring
+- [x]  Spread Operator
+- [x]  Rest Operator
+- [x]  Flat
+- [x]  FlatMap
+- [x]  `Array.from()`
+
+---
+
+### **Loops and Iteration**
+
+- [x]  Loops
+    - [x]  Do-While Loop
+    - [x]  For Loop
+    - [x]  ForEach
+    - [x]  Map
+    - [x]  Filter
+    - [x]  Reduce
+- [x]  Ternary Operator
+- [x]  `for...in` vs `for...of`
+
+---
+
+### **Error Handling**
+
+- [x]  `try-catch-finally` (Syntax)
+- [x]  Error Objects
+- [x]  Throwing Errors
+
+---
+
+### **Advanced Concepts**
+
+- [ ]  Event Delegation
+- [x]  Event Propagation
+- [x]  Event Listener
+- [x]  Event Handler
+- [ ]  Debouncing
+- [ ]  Throttling
+- [x]  Countdown Timer (Using `setInterval` or `setTimeout`)
+- [x]  `SetInterval`
+    - [x]  Cancel `setInterval`
+- [x]  `SetTimeout`
+
+---
+
+### **Math and Operations**
+
+- [x]  Math Operations
+    - [x]  2.2 -> 3 (Math Rounding)
+    - [x]  Sum of Products
+    - [ ]  Sum of Prime Numbers
+    - [x]  Palindrome
+    - [x]  Largest Odd Element from Array
+
+---
+
+### **Miscellaneous**
+
+- [x]  Template Literals
+- [x]  Type Casting
+    - [x]  Implicit / Explicit Type Casting
+- [x]  JSON Methods
+- [x]  LocalStorage vs SessionStorage
+- [x]  Cookies vs Cache
+- [x]  `Symbol`
+- [x]  `Set`
+- [x]  `Map`
+- [ ]  `WeakMap`
+- [ ]  `WeakSet`
+- [x]  `Proxy` Objects
+- [x]  `Generator` Functions
+- [x]  `Memoization`
+- [ ]  `Polyfills`
+- [ ]  `Currying`
+- [ ]  `Closure`
+    - [ ]  Applications and Drawbacks of Closure
+- [x]  `IIFE`
+    - [ ]  Benefits of IIFE
+- [x]  `Constructor`
+    - [x]  Purpose of Constructor
+- [x]  `Class`
+    - [x]  Create a Class
+    - [x]  Inheriting Class
+
+---
+
+### **Problem-Solving Topics**
+
+- [x]  Find the Sum of Products
+- [x]  Find the Sum of Elements in a Given Array
+- [ ]  Find the Average Price by Category
+- [x]  Find Frequency of Elements in an Array
+- [x]  Remove Duplicates from an Array
+- [x]  Palindrome
+- [x]  Largest Odd Element from Array
+- [x]  Sum of Prime Numbers
+- [x]  Total Number of Vowels in an Array
+- [x]  Sum of Positive Numbers in Mixed Array
+- [x]  Swap First & Last Character of String
+- [x]  Filter Numbers from Array
+- [x]  Largest String in Array
+- [x]  Remove Duplicate Even Numbers from Array
+
+### **Core JavaScript Concepts**
+
+- [x]  Variable Shadowing
+- [x]  Temporal Dead Zone (TDZ)
+- [x]  Hoisting
+- [x]  Dynamic Typing
+- [x]  Type Coercion
+- [x]  Type Inference
+- [x]  Strict Mode
+- [x]  `console.log(1 + +'1')` (Type Coercion)
+- [x]  `console.log('A' - 1)` (Type Coercion)
+- [x]  `console.log(null == undefined)`
+- [x]  `console.log({} == {})`
+- [x]  `console.log("" == "")`
+- [x]  `console.log(1 + +"1")`
+- [x]  `console.log("a" + 1)`
+- [x]  `console.log(1 + '1')`
+- [x]  Falsy Values
+- [x]  Truthy Values
+- [x]  Nullish Operator (`??`)
+- [x]  Optional Chaining (`?.`)
+- [ ]  Bitwise Operators
+- [x]  `instanceof`
+- [x]  `typeof`
+- [x]  `void`
+- [x]  `globalThis`
+- [x]  `this` Keyword
+- [ ]  Execution Context
+- [ ]  Memory Allocation
+- [ ]  Garbage Collection
+- [ ]  JIT Compilation
+- [ ]  ECMAScript
+- [ ]  Web APIs
+- [ ]  BOM (Browser Object Model)
+- [ ]  Event Loop
+- [ ]  Microtask Queue
+- [ ]  Callback Queue
+- [ ]  Call Stack
+
+---
+
+### **Functions**
+
+- [x]  Arrow Functions
+    - [x]  Modify Arrow Function to Accept Any Number of Arguments
+    - [x]  Arrow Function vs Regular Function (`this` Context)
+- [x]  Higher-Order Functions (HOF)
+- [x]  Pure Functions
+- [x]  IIFE (Immediately Invoked Function Expression)
+- [x]  Callback Functions
+- [x]  Callback Hell
+- [ ]  Currying
+- [ ]  Factory Functions
+    - [x]  Generator Functions
+        - [x]  Extracting Yields from Generator Function
+        - [x]  Create Generator Function to Print Even Numbers in Reverse Order with 1s Delay
+- [x]  Function Methods
+    - [x]  Call
+    - [x]  Apply
+    - [x]  Bind
+- [x]  Async Functions
+    - [x]  Calling Async Functions
+    - [x]  `async-await`
+    - [x]  `await` Keyword
+- [x]  Promises
+    - [x]  Promise States
+    - [x]  `Promise.all()`
+    - [x]  `Promise.allSettled()`
+    - [x]  `Promise.race()`
+    - [x]  `Promise.any()`
+    - [x]  `Promise.finally()`
+    - [x]  Promise Methods
+    - [x]  Promise Chaining
+    - [x]  Promise Combinators
+    - [x]  Promise with Timer Function
+- [x]  Memoization
+- [x]  Polyfills
+
+---
+
+### **Objects**
+
+- [x]  Object Methods
+    - [x]  `Object.keys`
+    - [x]  `Object.values`
+    - [x]  `Object.entries`
+    - [x]  `Object.freeze`
+    - [x]  `Object.seal`
+    - [x]  `Object.is`
+    - [x]  `Object.fromEntries`
+- [x]  Object Literals
+- [x]  Object Destructuring
+- [x]  Pass by Value vs Pass by Reference
+- [x]  Deep Copy
+    - [x]  Create a Deep Copy of an Object
+- [x]  Shallow Copy
+- [x]  Prototype
+- [x]  Prototypal Inheritance
+- [x]  Proxy Object
+- [ ]  WeakMap
+- [ ]  WeakSet
+
+---
+
+### **Arrays**
+
+- [x]  Array Methods
+    - [x]  Reduce
+    - [x]  FlatMap
+    - [x]  Filter
+- [x]  Array Destructuring
+- [x]  Spread Operator
+- [x]  Rest Operator
+- [x]  Flat
+- [x]  FlatMap
+- [x]  `Array.from()`
+
+---
+
+### **Loops and Iteration**
+
+- [x]  Loops
+    - [x]  Do-While Loop
+    - [x]  For Loop
+    - [x]  ForEach
+    - [x]  Map
+    - [x]  Filter
+    - [x]  Reduce
+- [x]  Ternary Operator
+- [x]  `for...in` vs `for...of`
+
+---
+
+### **Error Handling**
+
+- [x]  `try-catch-finally` (Syntax)
+- [x]  Error Objects
+- [x]  Throwing Errors
+
+---
+
+---

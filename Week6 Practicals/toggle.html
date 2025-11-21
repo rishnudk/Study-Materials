@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label > 
+        <input type="checkbox" id="myCheckbox"> Toggle me
+    </label>
+    <button id="toggle"> toggle checkbox</button>
+    <script>
+        const checkbox = document.getElementById('myCheckbox')
+        const button = document.getElementById('toggle')
+
+        button.addEventListener('click', () => {
+            checkbox.checked =! checkbox.checked;
+        })
+    </script>
+    
+</body>
+</html>
